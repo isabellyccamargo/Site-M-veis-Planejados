@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  
+
   <header>
     <div class="navbar navbar-expand-lg custom-header ">
 
@@ -76,20 +76,36 @@
   </header>
 
   <div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+    <div class="carousel-inner h-620">
+      <div class="orcamento-wrapper">
+        <a href="#orcamento" class="btn btn-orcamento">Faça seu orçamento</a>
+      </div>
+
       <div class="carousel-item active">
         <img
           src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
           class="d-block w-100" alt="imagem doo projeto">
       </div>
       <div class="carousel-item">
-        <img src="https://bambui.com.br/wp-content/uploads/2021/09/Foto-1-2.jpg" class="d-block w-100" alt="iamgem do projeto">
+        <img src="https://bambui.com.br/wp-content/uploads/2021/09/Foto-1-2.jpg" class="d-block w-100"
+          alt="iamgem do projeto">
       </div>
-       <a href="#orcamento" class="btn btn-orcamento">Faça seu orçamento</a>
+
     </div>
-     
+
 
   </div>
+
+<section class="position-relative">
+  
+    <div class="green-bar"></div>
+
+    <div class="image-overlays">
+      <img src="https://via.placeholder.com/150" class="img-block img-1" alt="img1" />
+      <img src="https://via.placeholder.com/150" class="img-block img-2" alt="img2" />
+      <img src="https://via.placeholder.com/150" class="img-block img-3" alt="img3" />
+    </div>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -112,29 +128,29 @@
       moveUnderline(items[0]);
     });
   </script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
-  const btnOrcamento = document.querySelector(".btn-orcamento");
-  const navbarCollapse = document.querySelector(".navbar-collapse");
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
+      const btnOrcamento = document.querySelector(".btn-orcamento");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
 
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      if (navbarCollapse.classList.contains("show")) {
-        new bootstrap.Collapse(navbarCollapse).hide();
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (navbarCollapse.classList.contains("show")) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+          }
+        });
+      });
+
+      if (btnOrcamento) {
+        btnOrcamento.addEventListener("click", function () {
+          if (navbarCollapse.classList.contains("show")) {
+            new bootstrap.Collapse(navbarCollapse).hide();
+          }
+        });
       }
     });
-  });
-
-  if (btnOrcamento) {
-    btnOrcamento.addEventListener("click", function () {
-      if (navbarCollapse.classList.contains("show")) {
-        new bootstrap.Collapse(navbarCollapse).hide();
-      }
-    });
-  }
-});
-</script>
+  </script>
 
 </body>
 
