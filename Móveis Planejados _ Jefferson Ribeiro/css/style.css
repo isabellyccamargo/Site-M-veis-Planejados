@@ -10,27 +10,6 @@ body {
   padding: 0;
 }
 
-nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  padding: 10px 20px;
-  font-size: 18px;
-}
-
-.underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background-color: #39531b;
-  transition: all 0.3s ease;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -38,6 +17,7 @@ header {
   width: 100%;
   z-index: 1000;
 }
+
 
 .custom-header {
   background-color: #fff4d3;
@@ -48,6 +28,8 @@ header {
   z-index: 1001;
   box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 }
+
+/* LOGO E NOME DA EMPRESA NO HEADER */
 
 .logo-container {
   position: absolute;
@@ -71,17 +53,40 @@ header {
   border-radius: 50%;
 }
 
-.icon-section {
-  gap: 60px;
-  align-items: center;
-}
-
 .icon-logo {
   margin-left: 93px;
   color: #243511;
   font-size: 22px;
   font-weight: bold;
   font-family: "Marcellus", sans-serif;
+}
+
+/* BOTAO DO HAMBURGUER NO RESPONSIVO */
+
+.custom-toggler {
+  background: none;
+  border: none;
+  padding: 5px;
+  margin-left: auto;
+  z-index: 1002;
+}
+
+.custom-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* CLASSIFICAÇÕES DA PÁGINA DO MENU */
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  padding: 10px 20px;
+  font-size: 18px;
 }
 
 .icon-text {
@@ -92,12 +97,39 @@ header {
   padding: 8px 0;
   text-decoration: none;
   z-index: 1;
-
 }
 
 .icon-text:hover {
   color: #39531b;
 }
+
+/* UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU */
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #39531b;
+  transition: all 0.3s ease;
+}
+
+
+.custom-toggler {
+  background: none;
+  border: none;
+  padding: 5px;
+  margin-left: auto;
+  z-index: 1002;
+}
+
+.custom-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* BOTÃO CTA NO MENU */
 
 .btn-orcamento {
   padding: 10px 30px;
@@ -114,18 +146,7 @@ header {
   color: #f8e09a;
 }
 
-.custom-toggler {
-  background: none;
-  border: none;
-  padding: 5px;
-  margin-left: auto;
-  z-index: 1002;
-}
-
-.custom-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
+ /* CARROSEL DE IMAGENS e E BOTÃO CTA */
 
 .carousel-inner {
   height: 600px;
@@ -134,7 +155,6 @@ header {
   width: 100%;
   overflow: hidden;
 }
-
 
 .orcamento-wrapper {
   position: absolute;
@@ -168,6 +188,8 @@ header {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* FAIXA VERDE COM AS IMAGENS DE UM PROJETO */
 
 .position-relative {
   margin-top: 120px;
@@ -216,7 +238,7 @@ header {
   .lll {
     color: #fff4d3;
     font-family: "Marcellus", sans-serif;
-    margin-left: 260px;
+    margin-left: 270px;
     overflow-wrap: break-word;
     font-size: 20px;
   }
@@ -256,7 +278,7 @@ header {
   top: -30px;
 }
 
-
+/* PARA TELAS DE TABLETS */
 @media (max-width: 992px) {
   .green-bar h1 {
     margin-left: 0px;
@@ -287,7 +309,7 @@ header {
   }
 }
 
-
+/* PARA TELAS DE CELULARES */
 @media (max-width: 768px) {
   .image-overlays {
     align-items: center;
