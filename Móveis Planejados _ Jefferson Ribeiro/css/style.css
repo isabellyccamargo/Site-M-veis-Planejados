@@ -111,7 +111,7 @@ nav {
   left: 0;
   height: 5px;
   width: 0;
-   background: #d0a523;
+  background: #d0a523;
   transition: all 0.3s ease;
 }
 
@@ -215,14 +215,18 @@ nav {
 
 .sobre-mim .imagem {
   flex: 1;
+  
 }
 
 .sobre-mim .imagem img {
   /* filter: grayscale(100%); foto preto e branco */
-   position: relative;
+  position: relative;
   width: 85%;
-  height: 560px; /* ajuste conforme sua imagem */
+  height: 560px;
+  /* ajuste conforme sua imagem */
   overflow: hidden;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 .sobre-mim .conteudo {
@@ -255,7 +259,7 @@ nav {
 }
 
 .sobre-mim .tab:hover {
-  color:#b38e20;
+  color: #b38e20;
 }
 
 .sobre-mim .tab {
@@ -364,7 +368,7 @@ nav {
     margin-left: 184px;
     overflow-wrap: break-word;
     font-size: 20px;
-     line-height: 1.6;
+    line-height: 1.6;
   }
 
   .lll {
@@ -373,7 +377,7 @@ nav {
     margin-left: 270px;
     overflow-wrap: break-word;
     font-size: 20px;
-     line-height: 1.6;
+    line-height: 1.6;
   }
 }
 
@@ -384,6 +388,7 @@ nav {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 }
 
 .img-block {
@@ -399,18 +404,108 @@ nav {
 .img-1 {
   left: 64%;
   top: -75px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 }
 
 .img-2 {
   left: 58%;
   top: 100px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 }
 
 .img-3 {
   left: 76%;
   top: -7px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 }
 
+.img-box:hover {
+  transform: scale(1.05);
+}
+
+/*CATEGORIAS*/
+.categorias {
+  margin-top: 100px;
+  font-size: 50px;
+  font-family: "Marcellus", sans-serif;
+  font-weight: bold;
+  color: #334321;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.custom-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 40px;
+  padding: 10px 0;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.custom-carousel::-webkit-scrollbar {
+  display: none;
+  /* Chrome */
+}
+
+.category-card {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #243511 ;
+  box-shadow: 0 0 10px #fff4d3(0, 0, 0, 0.1);
+}
+
+.Categoria-p{
+  color: #fff4d3;
+  font-family: "Marcellus", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background-color: #243511;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 80%;
+  color: #fff4d3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.left-btn {
+  left: 0;
+}
+
+.right-btn {
+  right: 0;
+}
+
+.custom-carousel::-webkit-scrollbar {
+  display: none;
+}
 
 /* PARA TELAS DE TABLETS */
 @media (max-width: 1024px) {
@@ -419,10 +514,11 @@ nav {
   .carousel-inner {
     margin-bottom: 25px;
   }
+
   .position-relative {
     margin-top: 70px;
   }
- 
+
   /*FAIXA VERDE DO PROCESSOS*/
   .green-banner {
     height: 200px;
@@ -485,7 +581,7 @@ nav {
     left: 83%;
     top: 60px;
   }
- 
+
   /*SOBRE NÓS*/
   .sobre-mim .tabs {
     gap: 46px;
@@ -512,6 +608,14 @@ nav {
     height: 650px;
     width: 100%;
   }
+
+  .category-card {
+    width: 250px;
+  }
+
+  .category-img {
+    height: 180px;
+  }
 }
 
 
@@ -527,12 +631,12 @@ nav {
   .position-relative {
     margin-top: 20px;
   }
-  
+
   .btn-orcamento-carrosel {
     border-radius: 50px;
   }
 
- /*PARTE VERDE DO PROCESSOS*/
+  /*PARTE VERDE DO PROCESSOS*/
   .green-bar {
     height: 300px;
     width: 100%;
@@ -589,12 +693,12 @@ nav {
   }
 
   .sobre-mim .imagem {
-  order: 2;
-}
+    order: 2;
+  }
 
-.sobre-mim .conteudo {
-  order: 1;
-}
+  .sobre-mim .conteudo {
+    order: 1;
+  }
 
   .sobre-mim .conteudo {
     padding-top: 20px;
@@ -625,8 +729,23 @@ nav {
 
   .sobre-mim .imagem img {
     height: 350px;
-     width: 85%;
-     margin-left: 25px;
+    width: 85%;
+    margin-left: 25px;
   }
-  
+
+  .carousel-item-box {
+    width: 140px;
+  }
+
+  .img-box {
+    height: 140px;
+  }
+
+  .category-card {
+    width: 200px;
+  }
+
+  .category-img {
+    height: 160px;
+  }
 }
