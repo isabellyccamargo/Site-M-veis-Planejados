@@ -185,7 +185,7 @@
         <!-- Seus cards -->
         <div class="category-card" style="min-width: 200px;">
           <a href="banheiro.html" class="text-decoration-none text-dark">
-            <img
+            <img 
               src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
               class="card-img-top category-img" alt="Banheiro" style="width: 100%;">
             <div class="card-body p-2 text-center">
@@ -241,6 +241,43 @@
 
     </div>
   </div>
+
+  <!-- FEEDBACK -->
+
+  <div class="feedback-section">
+    <h2 class="feed">FEEDBACK</h2>
+  <div class="feedback-track" id="feedbackTrack">
+    <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 1" class="avatar">
+      <p class="feedback-text">Adorei o serviço, ficou perfeito!</p>
+    </div>
+    <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+     <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+     <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+     <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+     <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+     <div class="feedback-card">
+      <img src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg" alt="Pessoa 2" class="avatar">
+      <p class="feedback-text">Excelente qualidade e atendimento!</p>
+    </div>
+  </div>
+</div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -401,6 +438,18 @@
   </script>
 
 
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('feedbackTrack');
+    const cards = Array.from(track.children);
+
+    // Clona os cards para criar o efeito de loop infinito
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  });
+</script>
 
 
 </body>
