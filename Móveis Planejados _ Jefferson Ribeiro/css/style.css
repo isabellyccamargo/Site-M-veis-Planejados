@@ -646,7 +646,6 @@
   footer {
     background-color: #32391e !important;
     font-family: "Marcellus", sans-serif !important;
-    text-align: center;
 
     .outro {
       color: #ffce3a;
@@ -676,10 +675,10 @@
       height: 147px;
       border-radius: 50%;
       margin-bottom: 20px;
+      margin-left: 60px;
     }
-  }
 
-
+    
   .loja {
     margin-top: 20px;
     color: #f8e09a;
@@ -704,7 +703,7 @@
     margin-right: 15px;
     margin-bottom: 40px;
   }
-
+  }
 
   /* PARA TELAS DE TABLETS */
   @media (max-width: 1024px) {
