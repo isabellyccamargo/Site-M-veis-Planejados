@@ -238,7 +238,7 @@
     display: block;
     position: relative;
     width: 80%;
-    height: 570px;
+    height: 610px;
     overflow: hidden;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
 
@@ -433,11 +433,11 @@
     color: #32391e;
   }
 
-  .slogan{
-     color: #32391e;
-      font-size: 20px;
-      margin: none;
-       font-weight: bold;
+  .slogan {
+    color: #32391e;
+    font-size: 20px;
+    margin: none;
+    font-weight: bold;
   }
 
   .carousel-wrapper {
@@ -647,50 +647,64 @@
     background-color: #32391e !important;
     font-family: "Marcellus", sans-serif !important;
     text-align: center;
-    
-  .outro{
+
+    .outro {
       color: #ffce3a;
       text-transform: none !important;
       margin-top: 15px;
       font-size: 20px;
     }
 
-    .outros{
+    .outros {
       margin-top: 20px;
       color: #f8e09a;
     }
 
     .link {
-       color: #f8e09a;
+      color: #f8e09a;
     }
 
-     .link:hover{
-     
+    .link:hover {
+
       transition: 1s;
       color: #c29f36;
     }
 
     .logo-footer {
-       box-shadow: 0 0 6px 3px rgb(255, 219, 129);
-        width: 147px;
-    height: 147px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+      box-shadow: 0 0 6px 3px rgb(255, 219, 129);
+      width: 147px;
+      height: 147px;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
   }
 
 
-    .loja{
-      margin-top: 20px;
-      color: #f8e09a;
-      font-size: 14px;
-    }
-    .nomeloja{
-      color: #ffce3a;
-      text-transform: none !important;
-        font-size: 25px;
-        top: 10%;
-      }
+  .loja {
+    margin-top: 20px;
+    color: #f8e09a;
+    font-size: 14px;
+  }
+
+  .nomeloja {
+    color: #ffce3a;
+    text-transform: none !important;
+    font-size: 25px;
+    top: 10%;
+  }
+
+  .linha {
+    color: #ffce3a;
+  }
+
+  .fab.fa-instagram {
+    font-size: 27px;
+    color: #e1306c;
+    /* Cor do Instagram */
+    margin-right: 15px;
+    margin-bottom: 40px;
+  }
+
 
   /* PARA TELAS DE TABLETS */
   @media (max-width: 1024px) {
@@ -883,12 +897,12 @@
 
     .sobre-mim .imagem {
       order: 2;
+      
     }
 
     .sobre-mim .conteudo {
       order: 1;
     }
-
     .sobre-mim .conteudo {
       padding-top: 20px;
     }
@@ -899,9 +913,12 @@
     }
 
     .sobre-mim .tabs {
-      gap: 46px;
+      gap: 42px;
     }
 
+     .sobre-mim p {
+    text-align:left;
+  }
 
     .sobre-mim .tab {
       white-space: normal;
@@ -918,8 +935,9 @@
 
     .sobre-mim .imagem img {
       height: 350px;
-      width: 85%;
-      margin-left: 25px;
+      width: 100%;
+      margin-left: 20px;
+      margin-top: 20px;
     }
 
     .carousel-item-box {
@@ -963,4 +981,14 @@
       width: 75px;
       height: 75px;
     }
+
+      #localizacao {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .onde {
+    font-size: 40px;
+    font-weight: bold;
+  }
   }
