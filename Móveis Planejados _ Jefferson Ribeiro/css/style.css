@@ -19,7 +19,6 @@
     z-index: 1000;
   }
 
-
   .custom-header {
     background-color: #fff4d3;
     border-radius: 40px;
@@ -57,7 +56,7 @@
 
   .icon-logo {
     margin-left: 93px;
-    color: #243511;
+    color: #32391e;
     font-size: 22px;
     font-weight: bold;
     font-family: "Marcellus", sans-serif;
@@ -93,7 +92,7 @@
   }
 
   .icon-text {
-    color: #243511;
+    color: #32391e;
     font-size: 16px;
     font-weight: bold;
     font-family: "Marcellus", sans-serif;
@@ -137,7 +136,7 @@
 
   .btn-orcamento {
     padding: 10px 30px;
-    background-color: #3a411f;
+    background-color: #32391e;
     color: #fff4d3;
     border-radius: 30px;
     font-size: 18px;
@@ -190,7 +189,7 @@
 
   .btn-orcamento-carrosel {
     padding: 10px 30px;
-    background-color: #3a411f;
+    background-color: #32391e;
     color: #fff4d3;
     border-radius: 30px;
     font-size: 18px;
@@ -254,7 +253,7 @@
     font-size: 48px;
     font-weight: bold;
     /*negrito*/
-    color: #334321;
+    color: #32391e;
     margin-bottom: 15px;
     font-family: "Marcellus", sans-serif;
     margin-left: 200px;
@@ -262,7 +261,7 @@
 
   .sobre-mim p {
     font-size: 19px;
-    color: #3a411f;
+    color: #32391e;
     line-height: 1.9;
     font-family: "Marcellus", sans-serif;
     text-align: justify;
@@ -328,13 +327,13 @@
   }
 
   .green-banner {
-    background-color: #3a411f;
+    background-color: #32391e;
     height: 200px;
     position: relative;
   }
 
   .green-bar {
-    background-color: #3a411f;
+    background-color: #32391e;
     color: #fff4d3;
     height: 290px;
     width: 100%;
@@ -431,7 +430,14 @@
     font-size: 50px;
     font-family: "Marcellus", sans-serif;
     font-weight: bold;
-    color: #334321;
+    color: #32391e;
+  }
+
+  .slogan{
+     color: #32391e;
+      font-size: 20px;
+      margin: none;
+       font-weight: bold;
   }
 
   .carousel-wrapper {
@@ -464,7 +470,7 @@
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s;
-    background-color: #3a411f;
+    background-color: #32391e;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
 
   }
@@ -498,13 +504,13 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    color: #3a411f;
+    color: #32391e;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
   }
 
   #btn-prev:hover,
   #btn-next:hover {
-    background-color: #3a411f;
+    background-color: #32391e;
     color: white;
   }
 
@@ -523,7 +529,7 @@
     overflow: hidden;
     width: 100%;
     height: 410px;
-    background-color: #3a411f;
+    background-color: #32391e;
     padding: 2rem 0;
   }
 
@@ -531,7 +537,7 @@
     margin-left: 10px;
     width: 4px;
     height: 120px;
-    background-color: #3a411f;
+    background-color: #32391e;
     border-radius: 2px;
   }
 
@@ -572,7 +578,7 @@
 
   .feedback-text {
     font-size: 20px;
-    color: #334321;
+    color: #32391e;
     margin-left: px;
     z-index: 3;
     position: relative;
@@ -587,7 +593,7 @@
     font-family: "Marcellus", sans-serif;
     font-weight: bold;
     font-size: 20px;
-    color: #334321;
+    color: #32391e;
     transform: none;
     z-index: 2;
   }
@@ -609,7 +615,7 @@
   /*LOCALIZAÇÃO*/
   #localizacao {
     font-family: "Marcellus", sans-serif;
-    color: #334321;
+    color: #32391e;
     text-align: center;
     margin: 80px;
     font-size: 20px;
@@ -618,16 +624,10 @@
 
   .onde {
     font-family: "Marcellus", sans-serif;
-    color: #334321;
+    color: #32391e;
     text-align: center;
     font-size: 45px;
     font-weight: bold;
-  }
-
-
-  footer {
-    background-color: #334321;
-    padding: 20px 0px;
   }
 
   .card {
@@ -641,6 +641,56 @@
     padding-bottom: 60px; */
     /* box-shadow: 0 0 3px 3px #fff1b7; */
   }
+
+  /*FOOTER*/
+  footer {
+    background-color: #32391e !important;
+    font-family: "Marcellus", sans-serif !important;
+    text-align: center;
+    
+  .outro{
+      color: #ffce3a;
+      text-transform: none !important;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    .outros{
+      margin-top: 20px;
+      color: #f8e09a;
+    }
+
+    .link {
+       color: #f8e09a;
+    }
+
+     .link:hover{
+     
+      transition: 1s;
+      color: #c29f36;
+    }
+
+    .logo-footer {
+       box-shadow: 0 0 6px 3px rgb(255, 219, 129);
+        width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    }
+  }
+
+
+    .loja{
+      margin-top: 20px;
+      color: #f8e09a;
+      font-size: 14px;
+    }
+    .nomeloja{
+      color: #ffce3a;
+      text-transform: none !important;
+        font-size: 25px;
+        top: 10%;
+      }
 
   /* PARA TELAS DE TABLETS */
   @media (max-width: 1024px) {
