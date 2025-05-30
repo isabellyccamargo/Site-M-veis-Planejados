@@ -4,10 +4,12 @@
     margin: 0;
     padding: 0;
   }
-section {
-  scroll-margin-top: 110px; /* ajuste conforme a altura da sua navbar */
-}
-  
+
+  section {
+    scroll-margin-top: 110px;
+    /* ajuste conforme a altura da sua navbar */
+  }
+
   body {
     background-color: #fff4d3;
     margin: 0;
@@ -498,6 +500,22 @@ section {
     color: white;
   }
 
+  .btn-orcamento-categoria {
+    padding: 10px 30px;
+    background-color: #32391e;
+    color: #fff4d3;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    margin-top: 15px;
+  }
+
+  .btn-orcamento-categoria:hover {
+    background-color: #4c5528;
+    color: #f8e09a;
+  }
+
   /*FEEDBACK*/
 
   .feed {
@@ -519,7 +537,7 @@ section {
 
   .line-vertical {
     margin-left: 10px;
-    width: 4px;
+    width: 2px;
     height: 120px;
     background-color: #32391e;
     border-radius: 2px;
@@ -542,9 +560,6 @@ section {
     width: 310px;
     text-align: center;
     flex-shrink: 0;
-    /* margin-top: 30px;
-    padding-bottom: 60px; */
-    /* box-shadow: 0 0 3px 3px #fff1b7; */
   }
 
   .avatar {
@@ -560,10 +575,36 @@ section {
   }
 
 
-  .feedback-text {
-    font-size: 20px;
+  .feedback-maria {
+    margin-top: 25px;
+    font-size: 18px;
     color: #32391e;
-    margin-left: px;
+    z-index: 3;
+    position: relative;
+    
+  }
+
+  .feedback-wii {
+     margin-left: 4px;
+    font-size: 18px;
+    color: #32391e;
+    z-index: 3;
+    position: relative;
+  }
+
+  .feedback-mari {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #32391e;
+    z-index: 3;
+    position: relative;
+  }
+
+  .feedback-andreo {
+    margin-left: 4px;
+    margin-top: 25px;
+    font-size: 18px;
+    color: #32391e;
     z-index: 3;
     position: relative;
   }
@@ -576,7 +617,7 @@ section {
     /* 20% da esquerda + largura da foto + gap */
     font-family: "Marcellus", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     color: #32391e;
     transform: none;
     z-index: 2;
@@ -621,9 +662,6 @@ section {
     height: 80px;
     width: 410px;
     flex-shrink: 0;
-    /* margin-top: 30px;
-    padding-bottom: 60px; */
-    /* box-shadow: 0 0 3px 3px #fff1b7; */
   }
 
   /*FOOTER*/
@@ -636,6 +674,12 @@ section {
       text-transform: none !important;
       margin-top: 15px;
       font-size: 20px;
+
+    }
+
+    .insta {
+      color: #f8e09a !important;
+      text-decoration: none;
     }
 
     .outros {
@@ -662,31 +706,31 @@ section {
       margin-left: 60px;
     }
 
-    
-  .loja {
-    margin-top: 20px;
-    color: #f8e09a;
-    font-size: 14px;
-  }
 
-  .nomeloja {
-    color: #ffce3a;
-    text-transform: none !important;
-    font-size: 25px;
-    top: 10%;
-  }
+    .loja {
+      margin-top: 20px;
+      color: #f8e09a;
+      font-size: 14px;
+    }
 
-  .linha {
-    color: #ffce3a;
-  }
+    .nomeloja {
+      color: #ffce3a;
+      text-transform: none !important;
+      font-size: 25px;
+      top: 10%;
+    }
 
-  .fab.fa-instagram {
-    font-size: 27px;
-    color: #e1306c;
-    /* Cor do Instagram */
-    margin-right: 15px;
-    margin-bottom: 40px;
-  }
+    .linha {
+      color: #ffce3a;
+    }
+
+    .fab.fa-instagram {
+      font-size: 27px;
+      color: #e1306c;
+      /* Cor do Instagram */
+      margin-right: 15px;
+      margin-bottom: 40px;
+    }
   }
 
   #btnTopo {
@@ -704,13 +748,13 @@ section {
     height: 60px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s;
   }
 
   #btnTopo:hover {
-  transform: scale(1.1);
-  background: linear-gradient(135deg, #32391e, #3a411f, #4c5528, #5c653a);
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #32391e, #3a411f, #4c5528, #5c653a);
   }
 
   /* PARA TELAS DE TABLETS */
@@ -811,8 +855,9 @@ section {
     }
 
     #sobre-mim .imagem img {
-      height: 650px;
-      width: 100%;
+      height: 600px;
+      width: 90%;
+      margin-top: 80px;
     }
 
     .category-card {
@@ -825,6 +870,14 @@ section {
 
     .carousel-wrapper {
       height: 270px;
+    }
+
+    .logodescriçao {
+      text-align: center;
+
+      .logo-footer {
+        margin-left: 5px;
+      }
     }
   }
 
@@ -853,28 +906,19 @@ section {
 
 
       h1 {
-        margin-left: 90px;
-        margin-bottom: 5px;
+        margin-left: 120px;
+        margin-bottom: 15px;
         padding-top: 5px;
+        font-size: 36px;
       }
 
       .l {
+        margin-right: 38px;
         margin-left: 38px;
         overflow-wrap: break-word;
         font-size: 18px;
       }
 
-      .ll {
-        margin-left: 38px;
-        overflow-wrap: break-word;
-        font-size: 18px;
-      }
-
-      .lll {
-        margin-left: 38px;
-        overflow-wrap: break-word;
-        font-size: 18px;
-      }
     }
 
     .img-block {
@@ -904,12 +948,13 @@ section {
 
     #sobre-mim .imagem {
       order: 2;
-      
+
     }
 
     #sobre-mim .conteudo {
       order: 1;
     }
+
     #sobre-mim .conteudo {
       padding-top: 20px;
     }
@@ -923,9 +968,9 @@ section {
       gap: 42px;
     }
 
-     #sobre-mim p {
-    text-align:left;
-  }
+    #sobre-mim p {
+      text-align: left;
+    }
 
     #sobre-mim .tab {
       white-space: normal;
@@ -945,6 +990,10 @@ section {
       width: 100%;
       margin-left: 20px;
       margin-top: 20px;
+    }
+
+    .categorias {
+      font-size: 36px;
     }
 
     .carousel-item-box {
@@ -973,10 +1022,11 @@ section {
 
     .feedback-section {
       height: 380px;
+      margin-bottom: 70px;
     }
 
     .feed {
-      font-size: 25px;
+      font-size: 27px;
     }
 
     .feedback-card {
@@ -989,13 +1039,43 @@ section {
       height: 75px;
     }
 
-      #localizacao {
-    font-size: 15px;
-    font-weight: bold;
-  }
 
-  .onde {
-    font-size: 40px;
-    font-weight: bold;
-  }
+    #localizacao {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .onde {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 70px;
+    }
+
+    .logodescriçao {
+      text-align: center;
+
+      .logo-footer {
+        margin-right: 60px;
+      }
+
+    }
+
+    #localizacao {
+      margin: 10px;
+    }
+
+    .onde {
+      font-size: 36px;
+    }
+
+    .endereco {
+      margin: 27px;
+    }
+
+    .mapa {
+      width: 300px;
+    }
   }
