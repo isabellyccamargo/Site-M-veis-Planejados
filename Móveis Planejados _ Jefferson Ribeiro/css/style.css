@@ -609,6 +609,14 @@
     position: relative;
   }
 
+  .feedback-sid {
+     margin-left: 4px;
+    font-size: 18px;
+    color: #32391e;
+    z-index: 3;
+    position: relative;
+  }
+
   .nome {
     position: absolute;
     margin-bottom: 20px;

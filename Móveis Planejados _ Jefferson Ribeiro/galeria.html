@@ -53,7 +53,7 @@
           <div class="underline"></div>
 
           <!-- BOTÃO CTA NO MENU -->
-          <a href="#orcamento" class="btn btn-orcamento">Voltar</a>
+          <a href="index.html#categoria" class="btn btn-orcamento">Voltar</a>
 
         </ul>
 
@@ -146,42 +146,42 @@
 
     <!-- Fotos de exemplo -->
     <!-- Banheiro -->
-    <div class="col-12 col-md-6 foto-item" data-categoria="banheiro">
+    <div class="col-12 col-md-3 foto-item" data-categoria="banheiro">
       <img src="https://picsum.photos/id/1015/600/400" alt="Banheiro 1" class="gallery-img" />
     </div>
-    <div class="col-12 col-md-6 foto-item" data-categoria="banheiro">
+    <div class="col-12 col-md-3 foto-item" data-categoria="banheiro">
       <img src="https://picsum.photos/id/1016/600/400" alt="Banheiro 2" class="gallery-img" />
     </div>
 
     <!-- Cozinha -->
-    <div class="col-12 col-md-6 foto-item" data-categoria="cozinha" style="display:none;">
-      <img src="https://picsum.photos/id/1025/600/400" alt="Cozinha 1" class="gallery-img" />
+    <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
+      <img src="fotos/feedback/andreo.jpeg" alt="Cozinha 1" class="gallery-img" />
     </div>
-    <div class="col-12 col-md-6 foto-item" data-categoria="cozinha" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
       <img src="https://picsum.photos/id/1033/600/400" alt="Cozinha 2" class="gallery-img" />
     </div>
 
     <!-- Quarto -->
-    <div class="col-12 col-md-6 foto-item" data-categoria="quarto" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="quarto" style="display:none;">
       <img src="https://picsum.photos/id/1040/600/400" alt="Quarto 1" class="gallery-img" />
     </div>
-    <div class="col-12 col-md-6 foto-item" data-categoria="quarto" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="quarto" style="display:none;">
       <img src="https://picsum.photos/id/1050/600/400" alt="Quarto 2" class="gallery-img" />
     </div>
 
     <!-- Sala -->
-    <div class="col-12 col-md-6 foto-item" data-categoria="sala" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="sala" style="display:none;">
       <img src="https://picsum.photos/id/1060/600/400" alt="Sala 1" class="gallery-img" />
     </div>
-    <div class="col-12 col-md-6 foto-item" data-categoria="sala" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="sala" style="display:none;">
       <img src="https://picsum.photos/id/1070/600/400" alt="Sala 2" class="gallery-img" />
     </div>
 
     <!-- Comercial -->
-    <div class="col-12 col-md-6 foto-item" data-categoria="comercial" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
       <img src="https://picsum.photos/id/1080/600/400" alt="Comercial 1" class="gallery-img" />
     </div>
-    <div class="col-12 col-md-6 foto-item" data-categoria="comercial" style="display:none;">
+    <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
       <img src="https://picsum.photos/id/1090/600/400" alt="Comercial 2" class="gallery-img" />
     </div>
 
@@ -257,6 +257,14 @@
     </div>
   </footer>
 
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <span class="nav prev">&#10094;</span> <!-- seta esquerda -->
+  <img class="modal-content" id="modal-img">
+  <span class="nav next">&#10095;</span> <!-- seta direita -->
+  <div id="caption"></div>
+</div>
+
    <!-- Ícones Font Awesome (necessário para os ícones) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -266,46 +274,6 @@
     ↑
   </button>
 
-  <script>
-    const btn = document.getElementById("btnTopo");
-
-    // Mostrar o botão quando descer 100px da parte de cima
-    window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-
-    // Quando clicar, volta pro topo suavemente
-    btn.onclick = function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>
-
-  <!-- UNDERLINE DO MENU -->
-  <script>
-    const menu = document.getElementById('navbarSupportedContent');
-    const items = menu.querySelectorAll('.nav-item');
-    const underline = menu.querySelector('.underline');
-
-    function moveUnderline(target) {
-
-      underline.style.width = `${target.offsetWidth}px`;
-      underline.style.left = `${target.offsetLeft}px`;
-    }
-
-    items.forEach(item => {
-      item.addEventListener('click', () => moveUnderline(item));
-    });
-
-    window.addEventListener('load', () => {
-      moveUnderline(items[0]);
-    });
-  </script>
-
-  <!-- HAMBURGUER DO RESPONSIVO -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
@@ -329,87 +297,38 @@
       }
     });
   </script>
-
-  <!-- UNDERLINE DO SOBRE NÓS -->
+  
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tabs = document.querySelectorAll(".tab");
-      const contents = document.querySelectorAll(".conteudo-tab");
-      const underline = document.querySelector(".tabs .underline-sobre");
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoriaAtual = urlParams.get('categoria');
 
-      function moveUnderline(tab) {
-        underline.style.width = `${tab.offsetWidth}px`;
-        underline.style.left = `${tab.offsetLeft}px`;
+  if (categoriaAtual) {
+    document.querySelectorAll('.category-card').forEach(card => {
+      const link = card.querySelector('a');
+      if (link.href.includes(categoriaAtual)) {
+        card.classList.add('ativo');
       }
-
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          // Alternar abas
-          tabs.forEach(t => t.classList.remove("ativo"));
-          contents.forEach(c => c.style.display = "none");
-
-          tab.classList.add("ativo");
-          const target = tab.getAttribute("data-tab");
-          document.getElementById(target).style.display = "block";
-
-          moveUnderline(tab);
-        });
-      });
-
-      // Inicializa underline e conteúdo ao carregar
-      const activeTab = document.querySelector(".tab.ativo");
-      if (activeTab) {
-        moveUnderline(activeTab);
-        document.getElementById(activeTab.getAttribute("data-tab")).style.display = "block";
-      }
-
-      // Atualiza underline se redimensionar a janela (resolução muda)
-      window.addEventListener("resize", () => {
-        const activeTab = document.querySelector(".tab.ativo");
-        if (activeTab) moveUnderline(activeTab);
-      });
     });
+  }
+</script>
+
+  <script>
+    const btn = document.getElementById("btnTopo");
+
+    // Mostrar o botão quando descer 100px da parte de cima
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Quando clicar, volta pro topo suavemente
+    btn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
   </script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const botoes = document.querySelectorAll('.categoria-btn');
-  const fotos = document.querySelectorAll('.foto-item');
-
-  botoes.forEach(botao => {
-    botao.addEventListener('click', () => {
-      const categoriaSelecionada = botao.getAttribute('data-categoria');
-
-      // Remove destaque de todos os botões
-      botoes.forEach(b => b.classList.remove('ativo'));
-      // Destaca o botão clicado
-      botao.classList.add('ativo');
-
-      // Mostrar só fotos da categoria selecionada
-      fotos.forEach(foto => {
-        if(foto.getAttribute('data-categoria') === categoriaSelecionada) {
-          foto.style.display = '';
-        } else {
-          foto.style.display = 'none';
-        }
-      });
-    });
-  });
-});
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const categoria = urlParams.get('categoria');
-
-    if (categoria) {
-      const botao = document.querySelector(`.categoria-btn[data-categoria="${categoria}"]`);
-      if (botao) {
-        botao.click(); // Simula o clique no botão correspondente
-      }
-    }
-  });
-</script>
 
 <script>
   const carouselMini = document.getElementById("categoryCarouselMini");
@@ -433,6 +352,106 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoria = urlParams.get('categoria');
+
+  if (categoria) {
+    // Mostrar apenas imagens da categoria atual
+    document.querySelectorAll('.foto-item').forEach(item => {
+      if (item.dataset.categoria === categoria) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    // Marcar categoria ativa (se estiver usando .category-card)
+    document.querySelectorAll('.category-card').forEach(card => {
+      const link = card.querySelector('a');
+      if (link && link.href.includes(categoria)) {
+        card.classList.add('ativo');
+      } else {
+        card.classList.remove('ativo');
+      }
+    });
+  }
+});
+</script>
+
+<script>
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  const captionText = document.getElementById("caption");
+  const closeBtn = document.querySelector(".close");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let images = []; // Só imagens visíveis da categoria ativa
+  let currentIndex = 0;
+
+  // Atualiza a lista de imagens visíveis (filtra por categoria atual)
+  function updateVisibleImages() {
+    images = Array.from(document.querySelectorAll('.foto-item'))
+      .filter(item => item.style.display !== 'none') // Apenas os visíveis
+      .map(item => item.querySelector('.gallery-img'));
+  }
+
+  // Adiciona evento a todas as imagens
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener("click", () => {
+      updateVisibleImages(); // Atualiza a lista com base na categoria atual
+      currentIndex = images.indexOf(img); // Define a imagem atual
+      openModal();
+    });
+  });
+
+  function openModal() {
+    const img = images[currentIndex];
+    modalImg.src = img.src;
+    captionText.textContent = img.alt;
+    modal.style.display = "block";
+  }
+
+  // Botão "anterior"
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    openModal();
+  });
+
+  // Botão "próximo"
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    openModal();
+  });
+
+  // Botão fechar
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Clique fora da imagem fecha o modal
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Teclado: esquerda, direita, ESC
+  document.addEventListener("keydown", (e) => {
+    if (modal.style.display === "block") {
+      if (e.key === "ArrowRight") nextBtn.click();
+      else if (e.key === "ArrowLeft") prevBtn.click();
+      else if (e.key === "Escape") closeBtn.click();
+    }
+  });
+</script>
+
 </script>
 
 </body>
