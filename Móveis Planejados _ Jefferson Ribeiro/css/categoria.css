@@ -5,6 +5,17 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > footer {
+  margin-top: auto;
+}
+
 section {
   scroll-margin-top: 110px;
   /* ajuste conforme a altura da sua navbar */
@@ -533,9 +544,7 @@ footer {
     .logodescriçao {
       text-align: center;
 
-      .logo-footer {
-        margin-right: 60px;
-      }
+
 
     }
 
