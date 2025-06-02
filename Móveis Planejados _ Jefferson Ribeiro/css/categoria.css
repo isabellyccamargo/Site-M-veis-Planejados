@@ -366,7 +366,7 @@ footer {
   max-height: 80vh;
   border-radius: 8px;
   margin: auto;
-  display: block;
+
 }
 
 .close {
@@ -411,7 +411,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 1024) {
+@media (max-width: 1024px) {
   #categoria-menu .custom-carousel {
     gap: 10px;
     padding: 5px 0;
@@ -434,6 +434,47 @@ footer {
     display: none;
   }
 
+  .modal {
+    display: none;
+  }
+
+  .modal.active {
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .modal-content {
+    max-width: 80%;
+    max-height: 60vh;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  .close {
+    font-size: 30px;
+    top: 10px;
+    right: 10px;
+  }
+
+  #caption {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    max-width: 80%;
+    max-height: 90vh;
+  }
+
+   .logodescriçao {
+      text-align: center;
+
+      .logo-footer {
+        margin-left: 5px;
+      }
+    }
 }
 
 @media (max-width: 480px) {
@@ -459,5 +500,44 @@ footer {
     /* ou 'flex' se estiver usando ícones */
   }
 
- 
+  .modal {
+    display: none;
+  }
+
+  .modal.open {
+    /* só exibe quando tem essa classe */
+    display: flex;
+  }
+
+  .modal.active {
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+
+  }
+
+  .modal-content {
+    max-width: 65%;
+    max-height: 60vh;
+    border-radius: 8px;
+    object-fit: contain;
+     text-align: center;
+  }
+
+  footer {
+      margin-top: 70px;
+    }
+
+    .logodescriçao {
+      text-align: center;
+
+      .logo-footer {
+        margin-right: 60px;
+      }
+
+    }
+
+
 }

@@ -160,19 +160,19 @@
 
       <!-- Fotos de exemplo -->
       <!-- Banheiro -->
-      <div class="col-12 col-md-3 foto-item" data-categoria="banheiro">
-        <img src="https://picsum.photos/id/1015/600/400" alt="Banheiro 1" class="gallery-img" />
+      <div class="col-6 col-md-3 foto-item" data-categoria="banheiro">
+        <img src="https://picsum.photos/id/1015/600/400" alt="" class="gallery-img" />
       </div>
-      <div class="col-12 col-md-3 foto-item" data-categoria="banheiro">
-        <img src="https://picsum.photos/id/1016/600/400" alt="Banheiro 2" class="gallery-img" />
+      <div class="col-6 col-md-3  foto-item" data-categoria="banheiro">
+        <img src="https://picsum.photos/id/1016/600/400" alt="" class="gallery-img" />
       </div>
 
       <!-- Cozinha -->
       <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
-        <img src="fotos/feedback/andreo.jpeg" alt="Cozinha 1" class="gallery-img" />
+        <img src="fotos/feedback/andreo.jpeg" alt="" class="gallery-img" />
       </div>
       <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
-        <img src="https://picsum.photos/id/1033/600/400" alt="Cozinha 2" class="gallery-img" />
+        <img src="https://picsum.photos/id/1033/600/400" alt="" class="gallery-img" />
       </div>
 
       <!-- Quarto -->
@@ -288,6 +288,7 @@
     ↑
   </button>
 
+  <!-- BOTÃO ESQUERDA E DIREITA DA CATEGORIA -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const carousel = document.getElementById("categoryCarouselMini");
@@ -353,6 +354,7 @@
     }
   </script>
 
+<!-- BOTÃO QUE APARECE PARA SUBIR AO TOPO NOVAMENTE -->
   <script>
     const btn = document.getElementById("btnTopo");
 
@@ -371,30 +373,7 @@
     };
   </script>
 
-  <script>
-    const carouselMini = document.getElementById("categoryCarouselMini");
-    document.getElementById("btn-prev-mini").addEventListener("click", () => {
-      carouselMini.scrollBy({ left: -150, behavior: "smooth" });
-    });
-    document.getElementById("btn-next-mini").addEventListener("click", () => {
-      carouselMini.scrollBy({ left: 150, behavior: "smooth" });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const categoria = urlParams.get('categoria');
-
-      if (categoria) {
-        const targetSection = document.getElementById(categoria);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-  </script>
-
+<!-- PARA MOSTRAR SÓ AS IMAGENS DAQUELA CATEGORIA -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -423,6 +402,8 @@
     });
   </script>
 
+
+  <!-- MODAL -->
   <script>
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
@@ -454,7 +435,7 @@
       const img = images[currentIndex];
       modalImg.src = img.src;
       captionText.textContent = img.alt;
-      modal.style.display = "block";
+      modal.classList.add("active");
     }
 
     // Botão "anterior"
@@ -473,27 +454,29 @@
 
     // Botão fechar
     closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
+      modal.classList.remove("active");
     });
 
     // Clique fora da imagem fecha o modal
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.style.display = "none";
+       modal.classList.remove("active");
       }
     });
 
     // Teclado: esquerda, direita, ESC
     document.addEventListener("keydown", (e) => {
-      if (modal.style.display === "block") {
+      if (modal.style.display === "active") {
         if (e.key === "ArrowRight") nextBtn.click();
         else if (e.key === "ArrowLeft") prevBtn.click();
-        else if (e.key === "Escape") closeBtn.click();
+        else if (e.key === "Escape") modal.classList.remove("active");
       }
     });
   </script>
 
   </script>
+
+
 
 </body>
 
