@@ -227,7 +227,7 @@ nav {
   font-size: 18px;
   font-family: "Marcellus", sans-serif;
   text-decoration: none;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .btn-orcamento-carrosel:hover {
@@ -372,6 +372,9 @@ footer {
   text-align: center;
 }
 
+.modal.active{
+  display: flex;
+}
 .modal-content {
   max-width: 90%;
   max-height: 80vh;
@@ -543,8 +546,6 @@ footer {
 
     .logodescriçao {
       text-align: center;
-
-
 
     }
 

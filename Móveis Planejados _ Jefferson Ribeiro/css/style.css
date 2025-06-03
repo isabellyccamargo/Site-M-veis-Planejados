@@ -208,62 +208,67 @@
     color: #f8e09a;
   }
 
-
-  /* PARTE QUE FALA SOBRE O DONO E SOBRE A EMPRESA */
+  /*SOBRE MIM*/
 
   #sobre-mim {
     display: flex;
     /*transforma um elemento em um container flexível, permitindo alinhar e distribuir os elementos filhos de forma mais fácil e responsiva.*/
     justify-content: center;
     align-items: center;
-    padding: 60px 30px;
+    padding: 40px 30px;
     background-color: #fff4d3;
   }
 
   #sobre-mim .container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 340px;
     display: flex;
     max-width: 1310px;
-    width: 100%;
-    gap: 0px;
-
+    width: 80%;
+    gap: 40px;
+    /* controle da distância entre imagem e texto */
+    align-items: center;
   }
 
   #sobre-mim .imagem {
-    flex: 1;
-    display: inline-block;
-    width: fit-content;
-    height: fit-content;
-    padding: 0;
-    margin: 0;
-    line-height: 0;
-    border: none;
+    width: 20%;
+    /* imagem ocupa 40% do container */
+    flex-shrink: 0;
+    /* impede ela de encolher demais */
   }
+
 
   #sobre-mim .imagem img {
     display: block;
-    position: relative;
-    width: 80%;
-    height: 610px;
-    overflow: hidden;
+    width: 100%;
+    height: 310px;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-
   }
 
   #sobre-mim .conteudo {
-    flex: 1;
-    margin: none;
+    width: 40%;
+    /* texto ocupa os 60% restantes */
   }
 
   #sobre-mim h2 {
-    font-size: 48px;
+    font-size: 45px;
     font-weight: bold;
     /*negrito*/
     color: #32391e;
     margin-bottom: 15px;
     font-family: "Marcellus", sans-serif;
-    margin-left: 200px;
+    margin-left: 90px;
   }
 
+   #sobre-mim h3 {
+    font-weight: bold;
+    /*negrito*/
+    color: #32391e;
+    margin-bottom: 15px;
+    font-family: "Marcellus", sans-serif;
+    margin-left: 90px;
+   }
   #sobre-mim p {
     font-size: 19px;
     color: #32391e;
@@ -272,58 +277,6 @@
     text-align: justify;
   }
 
-  #sobre-mim .tabs {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Marcellus", sans-serif;
-    gap: 40px;
-  }
-
-  #sobre-mim .tab:hover {
-    color: #b38e20;
-  }
-
-  #sobre-mim .tab {
-    background: none;
-    border: none;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    /*faz com que o cursor do mouse vire uma mãozinha quando passa por cima de um elemento.*/
-    position: relative;
-    color: #3a411f;
-    transition: color 0.3s;
-    font-weight: bold;
-    /*negrito*/
-    font-family: "Marcellus", sans-serif;
-  }
-
-  .tabs {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 6px;
-  }
-
-
-  .tab.ativo {
-    color: #b9982a;
-  }
-
-  .underline-sobre {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    background-color: #b9982a;
-    transition: all 0.3s ease;
-    width: 0;
-    border-radius: 2px;
-  }
 
   /* FAIXA VERDE COM AS IMAGENS DE UM PROJETO */
 
@@ -581,11 +534,11 @@
     color: #32391e;
     z-index: 3;
     position: relative;
-    
+
   }
 
   .feedback-wii {
-     margin-left: 4px;
+    margin-left: 4px;
     font-size: 18px;
     color: #32391e;
     z-index: 3;
@@ -610,7 +563,7 @@
   }
 
   .feedback-sid {
-     margin-left: 4px;
+    margin-left: 4px;
     font-size: 18px;
     color: #32391e;
     z-index: 3;
@@ -840,34 +793,6 @@
       top: 60px;
     }
 
-    /*SOBRE NÓS*/
-    #sobre-mim .tabs {
-      gap: 46px;
-    }
-
-    #sobre-mim .tab {
-      white-space: normal;
-      /* permite a quebra de linha */
-      font-size: 20px;
-      line-height: 1.2;
-      margin-left: 0;
-    }
-
-    #sobre-mim .tab span {
-      display: block;
-      /* quebra manual usando <span> */
-    }
-
-    #sobre-mim h2 {
-      margin-left: 90px;
-    }
-
-    #sobre-mim .imagem img {
-      height: 600px;
-      width: 90%;
-      margin-top: 80px;
-    }
-
     .category-card {
       width: 250px;
     }
@@ -947,57 +872,6 @@
     .img-3 {
       left: 7%;
       top: 260px;
-    }
-
-    /*SOBRE NÓS*/
-    #sobre-mim .container {
-      flex-direction: column;
-    }
-
-    #sobre-mim .imagem {
-      order: 2;
-
-    }
-
-    #sobre-mim .conteudo {
-      order: 1;
-    }
-
-    #sobre-mim .conteudo {
-      padding-top: 20px;
-    }
-
-    #sobre-mim h2 {
-      font-size: 36px;
-      margin-left: 70px;
-    }
-
-    #sobre-mim .tabs {
-      gap: 42px;
-    }
-
-    #sobre-mim p {
-      text-align: left;
-    }
-
-    #sobre-mim .tab {
-      white-space: normal;
-      /* permite a quebra de linha */
-      font-size: 14px;
-      line-height: 1.2;
-      margin-left: 0;
-    }
-
-    #sobre-mim .tab span {
-      display: block;
-      /* quebra manual usando <span> */
-    }
-
-    #sobre-mim .imagem img {
-      height: 350px;
-      width: 100%;
-      margin-left: 20px;
-      margin-top: 20px;
     }
 
     .categorias {
