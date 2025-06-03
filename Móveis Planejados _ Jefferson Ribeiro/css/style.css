@@ -35,7 +35,6 @@
   }
 
   /* LOGO E NOME DA EMPRESA NO HEADER */
-
   .logo-container {
     position: absolute;
     /*posiciona um elemento de forma exata dentro do seu elemento pai*/
@@ -68,7 +67,6 @@
   }
 
   /* BOTAO DO HAMBURGUER NO RESPONSIVO */
-
   .custom-toggler {
     background: none;
     border: none;
@@ -83,7 +81,6 @@
   }
 
   /* CLASSIFICAÇÕES DA PÁGINA DO MENU */
-
   nav {
     position: relative;
     /* permite mover um elemento, mas mantendo seu espaço original na página */
@@ -111,7 +108,6 @@
   }
 
   /* UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU */
-
   .underline {
     position: absolute;
     /*posiciona um elemento de forma exata dentro do seu elemento pai*/
@@ -138,7 +134,6 @@
 
 
   /* BOTÃO CTA NO MENU */
-
   .btn-orcamento {
     padding: 10px 30px;
     background-color: #32391e;
@@ -155,7 +150,6 @@
   }
 
   /* CARROSEL DE IMAGENS e E BOTÃO CTA */
-
   .carousel-inner {
     height: 550px;
     /*tamanho das imagens do carrosel*/
@@ -208,80 +202,110 @@
     color: #f8e09a;
   }
 
-  /*SOBRE MIM*/
-
-    #sobre-mim {
-      display: flex;
-      /*transforma um elemento em um container flexível, permitindo alinhar e distribuir os elementos filhos de forma mais fácil e responsiva.*/
-      justify-content: center;
-      align-items: center;
-      padding: 40px 30px;
-      background-color: #fff4d3;
-    }
-
-    #sobre-mim .container {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      margin-left: 340px;
-      display: flex;
-      max-width: 1310px;
-      width: 80%;
-      gap: 40px;
-      /* controle da distância entre imagem e texto */
-      align-items: center;
-    }
-
-    #sobre-mim .imagem {
-      width: 20%;
-      /* imagem ocupa 40% do container */
-      flex-shrink: 0;
-      /* impede ela de encolher demais */
-    }
-
-
-    #sobre-mim .imagem img {
-      display: block;
-      width: 100%;
-      height: 310px;
-      box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-    }
-
-    #sobre-mim .conteudo {
-      width: 40%;
-      /* texto ocupa os 60% restantes */
-    }
-
-    #sobre-mim h2 {
-      font-size: 45px;
-      font-weight: bold;
-      /*negrito*/
-      color: #32391e;
-      margin-bottom: 15px;
-      font-family: "Marcellus", sans-serif;
-      margin-left: 90px;
-    }
-
-    #sobre-mim h3 {
-      font-weight: bold;
-      /*negrito*/
-      color: #32391e;
-      margin-bottom: 15px;
-      font-family: "Marcellus", sans-serif;
-      margin-left: 90px;
-    }
-    #sobre-mim p {
-      font-size: 19px;
-      color: #32391e;
-      line-height: 1.9;
-      font-family: "Marcellus", sans-serif;
-      text-align: justify;
-    }
-
-    #sobre-mim .ver-mais {
-    color: #d0a523; /* verde escuro usado no site */
+  /*CATEGORIAS*/
+  .categorias {
+    margin-top: 50px;
+    font-size: 50px;
+    font-family: "Marcellus", sans-serif;
     font-weight: bold;
-    text-decoration: underline;
+    color: #32391e;
+  }
+
+  .slogan {
+    color: #32391e;
+    font-size: 20px;
+    margin: none;
+    font-weight: bold;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: none;
+    margin: none;
+  }
+
+  .custom-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 40px;
+    padding: 25px 25px;
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .custom-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome */
+  }
+
+  .category-card {
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #32391e;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .Categoria-p {
+    color: #fff4d3;
+    font-family: "Marcellus", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .category-card:hover {
+    transform: scale(1.06);
+  }
+
+  .category-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .custom-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  #btn-prev,
+  #btn-next {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #32391e;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  #btn-prev:hover,
+  #btn-next:hover {
+    background-color: #32391e;
+    color: white;
+  }
+
+  .btn-orcamento-categoria {
+    padding: 10px 30px;
+    background-color: #32391e;
+    color: #fff4d3;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 50PX;
+  }
+
+  .btn-orcamento-categoria:hover {
+    background-color: #4c5528;
+    color: #f8e09a;
   }
 
   /* FAIXA VERDE COM AS IMAGENS DE UM PROJETO */
@@ -312,7 +336,7 @@
       font-family: "Marcellus", sans-serif;
       margin-left: 315px;
       margin-bottom: 30px;
-      padding-top: 30px;
+      padding-top: 40px;
     }
 
     .l {
@@ -372,114 +396,81 @@
     transform: scale(1.05);
   }
 
-  /*CATEGORIAS*/
-  .categorias {
-    margin-top: 100px;
-    font-size: 50px;
-    font-family: "Marcellus", sans-serif;
+  /*SOBRE MIM*/
+    #sobre-mim {
+      display: flex;
+      /*transforma um elemento em um container flexível, permitindo alinhar e distribuir os elementos filhos de forma mais fácil e responsiva.*/
+      justify-content: center;
+      align-items: center;
+      padding: 40px 30px;
+      background-color: #fff4d3;
+    }
+
+    #sobre-mim .container {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 340px;
+      display: flex;
+      max-width: 1310px;
+      width: 80%;
+      gap: 40px;
+      /* controle da distância entre imagem e texto */
+      align-items: center;
+    }
+
+    #sobre-mim .imagem {
+      width: 20%;
+      /* imagem ocupa 40% do container */
+      flex-shrink: 0;
+      /* impede ela de encolher demais */
+    }
+
+    #sobre-mim .imagem img {
+      display: block;
+      width: 100%;
+      height: 310px;
+      box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+
+    #sobre-mim .conteudo {
+      width: 40%;
+      /* texto ocupa os 60% restantes */
+    }
+
+    #sobre-mim h2 {
+      font-size: 45px;
+      font-weight: bold;
+      /*negrito*/
+      color: #32391e;
+      margin-bottom: 15px;
+      font-family: "Marcellus", sans-serif;
+      margin-left: 30px;
+    }
+
+    #sobre-mim h3 {
+      font-weight: bold;
+      /*negrito*/
+      color: #32391e;
+      margin-bottom: 15px;
+      font-family: "Marcellus", sans-serif;
+      margin-left: 90px;
+    }
+    #sobre-mim p {
+      font-size: 19px;
+      color: #32391e;
+      line-height: 1.9;
+      font-family: "Marcellus", sans-serif;
+      text-align: justify;
+    }
+
+    #sobre-mim .ver-mais {
+    color: #d0a523; /* verde escuro usado no site */
     font-weight: bold;
-    color: #32391e;
-  }
-
-  .slogan {
-    color: #32391e;
-    font-size: 20px;
-    margin: none;
-    font-weight: bold;
-  }
-
-  .carousel-wrapper {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    box-shadow: none;
-    margin: none;
-  }
-
-  .custom-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 40px;
-    padding: 25px 25px;
-    scrollbar-width: none;
-    /* Firefox */
-  }
-
-  .custom-carousel::-webkit-scrollbar {
-    display: none;
-    /* Chrome */
-  }
-
-  .category-card {
-    flex: 0 0 auto;
-    width: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    background-color: #32391e;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-
-  }
-
-  .Categoria-p {
-    color: #fff4d3;
-    font-family: "Marcellus", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  .category-card:hover {
-    transform: scale(1.06);
-  }
-
-  .category-img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-  }
-
-  .custom-carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  #btn-prev,
-  #btn-next {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    color: #32391e;
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-  }
-
-  #btn-prev:hover,
-  #btn-next:hover {
-    background-color: #32391e;
-    color: white;
-  }
-
-  .btn-orcamento-categoria {
-    padding: 10px 30px;
-    background-color: #32391e;
-    color: #fff4d3;
-    border-radius: 30px;
-    font-size: 18px;
-    font-family: "Marcellus", sans-serif;
-    text-decoration: none;
-    margin-top: 15px;
-  }
-
-  .btn-orcamento-categoria:hover {
-    background-color: #4c5528;
-    color: #f8e09a;
+    text-decoration: underline;
   }
 
   /*FEEDBACK*/
-
   .feed {
     font-size: 40px;
     font-family: "Marcellus", sans-serif !important;
@@ -535,7 +526,6 @@
     object-fit: cover;
     z-index: 2;
   }
-
 
   .feedback-maria {
     margin-top: 25px;
@@ -612,7 +602,7 @@
     font-family: "Marcellus", sans-serif;
     color: #32391e;
     text-align: center;
-    margin: 80px;
+    margin: 50px;
     font-size: 20px;
     font-weight: bold;
   }
@@ -638,6 +628,23 @@
     border-radius: 5px;
   }
 
+  .btn-orcamento-localizacao{
+    padding: 10px 30px;
+    background-color: #32391e;
+    color: #fff4d3;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .btn-orcamento-localizacao:hover {
+    background-color: #4c5528;
+    color: #f8e09a;
+  }
+
   /*FOOTER*/
   footer {
     background-color: #32391e !important;
@@ -648,7 +655,6 @@
       text-transform: none !important;
       margin-top: 15px;
       font-size: 20px;
-
     }
 
     .insta {
@@ -666,7 +672,6 @@
     }
 
     .link:hover {
-
       transition: 1s;
       color: #c29f36;
     }
@@ -679,7 +684,6 @@
       margin-bottom: 20px;
       margin-left: 60px;
     }
-
 
     .loja {
       margin-top: 20px;
@@ -743,47 +747,6 @@
       margin-top: 70px;
     }
 
-  #sobre-mim .container {
-    margin-left: 180px;
-    display: flex;
-    max-width: 1310px;
-    width: 100%;
-    gap: 40px;
-    /* controle da distância entre imagem e texto */
-    align-items: center;
-  }
-
-  #sobre-mim .imagem {
-    width: 35%;
-    /* imagem ocupa 40% do container */
-    flex-shrink: 0;
-    /* impede ela de encolher demais */
-  }
-
-
-  #sobre-mim .imagem img {
-    display: block;
-    width: 100%;
-    height: 340px;
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-  }
-
-  #sobre-mim .conteudo {
-    width: 40%;
-    /* texto ocupa os 60% restantes */
-  }
-
-  #sobre-mim h2 {
-    font-size: 45px;
-    margin-left: 42px;
-  }
-
-   #sobre-mim h3 {
-    margin-left: 45px;
-   }
-
-
     /*FAIXA VERDE DO PROCESSOS*/
     .green-banner {
       height: 200px;
@@ -806,18 +769,6 @@
         overflow-wrap: break-word;
         font-size: 20px;
       }
-
-      .ll {
-        margin-left: 85px;
-        overflow-wrap: break-word;
-        font-size: 20px;
-      }
-
-      .lll {
-        margin-left: 200px;
-        overflow-wrap: break-word;
-        font-size: 20px;
-      }
     }
 
     .image-overlays {
@@ -829,7 +780,6 @@
     .img-block {
       width: 150px;
       height: 150px;
-
     }
 
     .img-1 {
@@ -859,6 +809,46 @@
       height: 270px;
     }
 
+     #sobre-mim .container {
+    margin-left: 180px;
+    display: flex;
+    max-width: 1310px;
+    width: 100%;
+    gap: 40px;
+    /* controle da distância entre imagem e texto */
+    align-items: center;
+  }
+
+  #sobre-mim .imagem {
+    width: 35%;
+    /* imagem ocupa 40% do container */
+    flex-shrink: 0;
+    /* impede ela de encolher demais */
+  }
+
+/*SOBRE-NOS*/
+  #sobre-mim .imagem img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  #sobre-mim .conteudo {
+    width: 40%;
+  }
+
+  #sobre-mim h2 {
+    font-size: 45px;
+    margin-left: 42px;
+  }
+
+   #sobre-mim h3 {
+    margin-left: 45px;
+   }
+
+   /*FOOTER*/
     .logodescriçao {
       text-align: center;
 
@@ -867,7 +857,6 @@
       }
     }
   }
-
 
   /* PARA TELAS DE CELULARES */
   @media (max-width: 480px) {
@@ -886,46 +875,10 @@
       border-radius: 50px;
     }
 
-/*SOBRE NÓS*/
-    #sobre-mim .container {
-      flex-direction: column;
-    }
-
-    #sobre-mim .imagem {
-      order: 2;
-
-    }
-
-    #sobre-mim .conteudo {
-      order: 1;
-    }
-
-    #sobre-mim .conteudo {
-      padding-top: 20px;
-    }
-
-    #sobre-mim h2 {
-      font-size: 36px;
-      margin-left: 70px;
-    }
-
-    #sobre-mim p {
-      text-align: left;
-    }
-
-
-    #sobre-mim .imagem img {
-      height: 350px;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-
     /*PARTE VERDE DO PROCESSOS*/
     .green-bar {
       height: 300px;
       width: 100%;
-
 
       h1 {
         margin-left: 120px;
@@ -940,7 +893,6 @@
         overflow-wrap: break-word;
         font-size: 18px;
       }
-
     }
 
     .img-block {
@@ -991,6 +943,39 @@
       height: 270px;
     }
 
+    /*SOBRE NÓS*/
+    #sobre-mim .container {
+      flex-direction: column;
+    }
+
+    #sobre-mim .imagem {
+      order: 2;
+    }
+
+    #sobre-mim .conteudo {
+      order: 1;
+    }
+
+    #sobre-mim .conteudo {
+      padding-top: 20px;
+    }
+
+    #sobre-mim h2 {
+      font-size: 36px;
+      margin-left: 70px;
+    }
+
+    #sobre-mim p {
+      text-align: left;
+    }
+
+    #sobre-mim .imagem img {
+      height: 350px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    /*FEEDBACK*/
     .feedback-section {
       height: 380px;
       margin-bottom: 70px;
@@ -1010,17 +995,27 @@
       height: 75px;
     }
 
-
+/*LOCALIZAÇÃO*/
     #localizacao {
       font-size: 15px;
       font-weight: bold;
+      margin: 10px;
     }
 
     .onde {
-      font-size: 40px;
+      font-size: 36px;
       font-weight: bold;
     }
 
+    .endereco {
+      margin: 27px;
+    }
+
+    .mapa {
+      width: 300px;
+    }
+
+    /*FOOTER*/
     footer {
       margin-top: 70px;
     }
@@ -1031,22 +1026,6 @@
       .logo-footer {
         margin-right: 60px;
       }
-
     }
 
-    #localizacao {
-      margin: 10px;
-    }
-
-    .onde {
-      font-size: 36px;
-    }
-
-    .endereco {
-      margin: 27px;
-    }
-
-    .mapa {
-      width: 300px;
-    }
   }
