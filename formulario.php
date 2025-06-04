@@ -80,10 +80,9 @@
     </div>
 
 
-
     <div class="container-sm">
 
-        <form class="row g-3" action="servicos/envia-email.php" method="post">
+        <form class="row g-3 " action="servicos/envia-email.php" method="post">
             <div class="col-12">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="João da Silva">
