@@ -46,7 +46,6 @@ header {
 }
 
 /* LOGO E NOME DA EMPRESA NO HEADER */
-
 .logo-container {
   position: absolute;
   /*posiciona um elemento de forma exata dentro do seu elemento pai*/
@@ -78,8 +77,7 @@ header {
   font-family: "Marcellus", sans-serif;
 }
 
-/* BOTAO DO HAMBURGUER NO RESPONSIVO */
-
+/* BOTAO Do HAMBURGUER NO RESPONSIVO */
 .custom-toggler {
   background: none;
   border: none;
@@ -94,7 +92,6 @@ header {
 }
 
 /* CLASSIFICAÇÕES DA PÁGINA DO MENU */
-
 nav {
   position: relative;
   /* permite mover um elemento, mas mantendo seu espaço original na página */
@@ -158,9 +155,7 @@ nav {
   box-shadow: none;
 }
 
-
 /* BOTÃO CTA NO MENU */
-
 .btn-orcamento {
   padding: 10px 30px;
   background-color: #32391e;
@@ -235,6 +230,7 @@ nav {
   color: #f8e09a;
 }
 
+/*GALERIA*/
 .gallery-img {
   width: 100%;
   /* ocupa toda a largura da coluna */
@@ -245,7 +241,6 @@ nav {
   transition: transform 0.3s ease;
 }
 
-/*Imagens abaixo do header*/
 .gallery-img:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -255,7 +250,6 @@ nav {
   color: #fff4d3;
   font-size: 15px;
   font-family: "Marcellus", sans-serif;
-
 }
 
 .category-card.ativo {
@@ -291,6 +285,7 @@ nav {
   font-weight: bold;
 }
 
+/*FOOTER*/  
 footer {
   background-color: #32391e !important;
   font-family: "Marcellus", sans-serif !important;
@@ -300,7 +295,6 @@ footer {
     text-transform: none !important;
     margin-top: 15px;
     font-size: 20px;
-
   }
 
   .insta {
@@ -318,7 +312,6 @@ footer {
   }
 
   .link:hover {
-
     transition: 1s;
     color: #c29f36;
   }
@@ -331,7 +324,6 @@ footer {
     margin-bottom: 20px;
     margin-left: 60px;
   }
-
 
   .loja {
     margin-top: 20px;
@@ -380,7 +372,6 @@ footer {
   max-height: 80vh;
   border-radius: 8px;
   margin: auto;
-
 }
 
 .close {
@@ -541,13 +532,11 @@ footer {
   }
 
   footer {
-      margin-top: 70px;
+            margin-top: 70px;
+          }
+
+          .logodescriçao {
+            text-align: center;
     }
-
-    .logodescriçao {
-      text-align: center;
-
-    }
-
 
 }

@@ -1,621 +1,633 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
+    <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ambientes Planejados</title>
-  <link rel="icon" href="fotos/logo/logo.png">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ambientes Planejados</title>
+      <link rel="icon" href="fotos/logo/logo.png">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
-  <!-- FONTE QUE ESTA SENDO APLICADA -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <!-- FONTE QUE ESTA SENDO APLICADA -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-  <header>
-    <div class="navbar navbar-expand-lg custom-header ">
+      <header>
+        <div class="navbar navbar-expand-lg custom-header ">
 
-      <div class="d-flex">
-        <!-- LOGO E NOME DA EMPRESA NO HEADER -->
-        <div class="logo-container fixed">
-          <img src="fotos/logo/logo.png" alt="Logo" class="logo-header">
+          <div class="d-flex">
+            <!-- LOGO E NOME DA EMPRESA NO HEADER -->
+            <div class="logo-container fixed">
+              <img src="fotos/logo/logo.png" alt="Logo" class="logo-header">
+            </div>
+
+            <div class="icon-logo"><span style="font-size: 32px;">A</span>mbientes <span
+                style="font-size: 32px;">P</span>lanejados</div>
+          </div>
+
+          <!-- BOTAO DO HAMBURGUER NO RESPONSIVO -->
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="bi bi-list" style="font-size: 28px; color: #243511;"></i>
+          </button>
+
+          <!-- CLASSIFICAÇÕES DA PÁGINA DO MENU -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="d-flex navbar-nav align-items-center gap-4 ms-auto  ">
+
+              <li class="nav-item">
+                <a href="#categoria" class="icon-text">
+                  <i class=" bi-tags-fill "></i>
+                  <span>Projetos</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#sobre-mim" class="icon-text">
+                  <i class="bi bi-person-lines-fill "></i>
+                  <span>Sobre Nós</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#feedback" class="icon-text">
+                  <i class=" bi-chat-dots-fill"></i>
+                  <span>Feedback</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#localizacao" class="icon-text">
+                  <i class=" bi-geo-alt-fill"></i>
+                  <span>Localização</span>
+                </a>
+              </li>
+
+              <!-- UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU -->
+              <div class="underline"></div>
+
+              <!-- BOTÃO CTA NO MENU -->
+              <a href="formulario.php" class="btn btn-orcamento">Faça seu orçamento</a>
+
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- CARROSEL DE IMAGENS  -->
+      <div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner h-620">
+
+          <div class="carousel-item">
+            <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="d-block w-100"
+              alt="imagem do projeto">
+          </div>
+
+          <div class="carousel-item">
+            <img src="fotos/carrossel-menu/2b9e7e37-9923-4bff-9684-b3c8f1818b43.JPG" class="d-block w-100"
+              alt="iamgem do projeto">
+          </div>
+
+          <div class="carousel-item active ">
+            <img src="fotos/carrossel-menu/855b3222-db65-4bbd-b865-c1834a81cefc.JPG" class="d-block w-100"
+              alt="iamgem do projeto">
+          </div>
+
+          <div class="carousel-item ">
+            <img src="fotos/carrossel-menu/95075929-0a23-4865-a143-1e8f8fec32a1.JPG" class="d-block w-100"
+              alt="iamgem do projeto">
+          </div>
+
         </div>
 
-        <div class="icon-logo"><span style="font-size: 32px;">A</span>mbientes <span
-            style="font-size: 32px;">P</span>lanejados</div>
       </div>
 
-      <!-- BOTAO DO HAMBURGUER NO RESPONSIVO -->
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="bi bi-list" style="font-size: 28px; color: #243511;"></i>
+      <!-- CATEGORIAS -->
+      <section id="categoria">
+
+        <div class="container text-center my-5 ">
+
+          <h2 class="mb-4  categorias">Conheça ambientes já transformados!</h2>
+
+          <p class="slogan">"Planejando ambientes, realizando sonhos."</p>
+
+          <div class="carousel-wrapper"
+            style="position: relative; display: flex; align-items: center; justify-content: center;">
+
+            <button class="btn rounded-circle shadow" type="button" id="btn-prev">
+              <i class="bi bi-chevron-left fs-4"></i>
+            </button>
+
+            <div class="custom-carousel" id="categoryCarousel"
+              style="display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 20px; scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <!-- Seus cards -->
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.html?categoria=banheiro" class="text-decoration-none text-dark">
+
+                  <img
+                    src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
+                    class="card-img-top category-img" alt="Banheiro" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">Banheiro</p>
+                  </div>
+
+                </a>
+              </div>
+
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.html?categoria=quarto" class="text-decoration-none text-dark">
+
+                  <img
+                    src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
+                    class="card-img-top category-img" alt="Quarto" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">Quarto</p>
+                  </div>
+
+                </a>
+              </div>
+
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.html?categoria=cozinha" class="text-decoration-none text-dark">
+
+                  <img
+                    src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
+                    class="card-img-top category-img" alt="Cozinha" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">Cozinha</p>
+                  </div>
+
+                </a>
+              </div>
+
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.html?categoria=sala" class="text-decoration-none text-dark">
+
+                  <img
+                    src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
+                    class="card-img-top category-img" alt="Sala" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">Sala</p>
+                  </div>
+
+                </a>
+              </div>
+
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.html?categoria=comercial" class="text-decoration-none text-dark">
+
+                  <img
+                    src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
+                    class="card-img-top category-img" alt="Escritório" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">Comercial</p>
+                  </div>
+
+                </a>
+              </div>
+            </div>
+
+            <button class="btn  rounded-circle shadow" type="button" id="btn-next">
+              <i class="bi bi-chevron-right fs-4"></i>
+            </button>
+
+          </div>
+
+          <div>
+            <a href="formulario.php" class="btn  btn-orcamento-categoria">Faça seu orçamento</a>
+          </div>
+
+        </div>
+        
+      </section>
+      <!-- FAIXA VERDE COM AS IMAGENS DE UM PROJETO -->
+      <section class="position-relative">
+
+        <div class="green-bar">
+          <h1>Processos</h1>
+          <p class="l">A importância dos processos em móveis planejados está na <br> garantia de um produto final que
+            combina funcionalidade, <br> qualidade e design personalizado para melhor atender você!</p>
+        </div>
+
+        <div class="image-overlays">
+          <img src="fotos/processos/743709CC-F0FF-491C-BEF2-DA3854B7E672.PNG" class="img-block img-1" alt="img1" />
+          <img src="fotos/processos/WhatsApp Image 2025-05-29 at 10.27.55.jpeg" class="img-block img-2" alt="img2" />
+          <img src="fotos/processos/855b3222-db65-4bbd-b865-c1834a81cefc.JPG" class="img-block img-3" alt="img3" />
+        </div>
+      </section>
+
+    <!-- PARTE QUE FALA SOBRE O DONO E SOBRE A EMPRESA -->
+
+      <section id="sobre-mim">
+        <div class="container">
+
+          <div class="imagem">
+            <img src="fotos/sobre-nos/jefferson.jpg" alt="Foto sobre mim">
+          </div>
+
+          <div class="conteudo">
+            <h2 class="sobre">Nossa Identidade</h2>
+            <h3 class="sobre">Jefferson Ribeiro</h3>
+            <p>
+            Dono da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Busco sempre evoluir  pessoal e profissionalmente, com foco... <a href="sobreNos.html" class="ver-mais">Saiba mais</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEEDBACK -->
+      <section id="feedback">
+        <div class="feedback-section">
+
+          <h2 class="feed">O que nossos clientes dizem!</h2>
+
+          <div class="feedback-track" id="feedbackTrack">
+
+            <div class="feedback-card">
+              <div class="line-vertical"></div>
+
+              <img
+                src="fotos/feedback/Maria.jpeg"
+                alt="Pessoa 1" class="avatar">
+
+              <div class="content">
+                <p class="feedback-maria ">"Eu amei minha cozinha, recomendo esse trabalho maravilhoso."</p>
+                <p class="nome">Maria Piruk </p>
+              </div>
+
+            </div>
+          
+            <div class="feedback-card">
+              <div class="line-vertical"></div>
+
+              <img
+                src="fotos/feedback/willian.jpeg"
+                alt="Pessoa 2" class="avatar">
+
+              <div class="content">
+                <p class="feedback-wii">"Ficou perfeito, qualidade, cuidado em cada detalhe mesmo eu sendo exigente, entrega antes do prazo, recomendo com certeza"</p>
+                <p class="nome">Willian Trento</p>
+              </div>
+
+            </div>
+
+            <div class="feedback-card">
+              <div class="line-vertical"></div>
+
+              <img
+                src="fotos/feedback/mari.jpeg"
+                alt="Pessoa 2" class="avatar">
+
+              <div class="content">
+                <p class="feedback-mari">"Um trabalho de qualidade  feito com muito carinho e muito capricho em cada detalhe."</p>
+                <p class="nome">Marinete Ferreira</p>
+              </div>
+
+            </div>
+
+            <div class="feedback-card">
+              <div class="line-vertical"></div>
+
+              <img
+                src="fotos/feedback/andreo.jpeg"
+                alt="Pessoa 2" class="avatar">
+
+              <div class="content">
+                <p class="feedback-andreo">"Os móveis ficaram lindos, super funcionais e bem planejados para o espaço!"</p>
+                <p class="nome">Andreo Santana</p>
+              </div>
+
+            </div>
+
+            <div class="feedback-card">
+              <div class="line-vertical"></div>
+
+              <img
+                src="fotos/feedback/sid.jpeg"
+                alt="Pessoa 1" class="avatar">
+
+              <div class="content">
+                <p class="feedback-sid ">"Parabéns pessoal ficou muito bom, os irmaos da igreja amaram, ficou lindo, uniu beleza e custos. Super indicamos, gratidão. 🙏"</p>
+                <p class="nome">Siderlei Dias</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCALIZAÇÃO -->
+      <section id="localizacao">
+
+        <h2 class="onde">Onde nos encontrar?</h2>
+        
+        <p class="endereco">
+          Endereço: Vila Rural Andorinha, Rua Aparecida Bernardo Valarini (Casa de esquina), Araruna - BR
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.411909899734!2d-52.5136421!3d-23.922434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed6f00001c1a21%3A0x9fa0bab7e9b0f8e0!2sRibeiro%20Ambientes%20Planejados!5e1!3m2!1spt-BR!2sbr!4v1748872670819!5m2!1spt-BR!2sbr"
+          width="95%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+
+        <div>
+          <a href="formulario.php" class="btn  btn-orcamento-localizacao">Faça seu orçamento</a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="bg- pt-5 pb-4">
+        <div class="container text-md-left">
+          <div class="row text-md-left">
+
+            <!-- Logo e descrição -->
+            <div class="logodescriçao col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+              <img src="fotos/logo/logo.png" alt="Logo" class="logo-footer">
+              <h5 class=" nomeloja mb-4 font-weight-bold "><span style="font-size: 40px;">A</span>mbientes <span
+                  style="font-size: 40px;">P</span>lanejados</h5>
+              <p class="loja">"Planejando ambientes, realizando sonhos."</p>
+            </div>
+
+            <!-- Links úteis -->  
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="outro mb-4 font-weight-bold ">Links</h5>
+              <p class="outros"><a href="#" class="link text-decoration-none">Início</a></p>
+              <p class="outros"><a href="#" class="link text-decoration-none">Sobre Nós</a></p>
+              <p class="outros"><a href="#" class="link text-decoration-none">Categoria</a></p>
+              <p class="outros"><a href="#" class="link text-decoration-none">Feedback</a></p>
+              <p class="outros"><a href="#" class="link text-decoration-none">Localização</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="outro mb-4">Contato</h5>
+              <p class="outros"><i class="">Endereço: Vila Rural Andorinha, Rua Aparecida Bernardo Valarini (Casa de
+                  esquina), Araruna - BR</i></p>
+            </div>
+
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+              <h5 class="outro mb-4 font-weight-bold ">Siga-nos</h5>
+
+              <p>
+                <a href="https://www.instagram.com/ribeiroambientesplanejados" target="_blank" class="insta me-3">
+                  <i class="fab fa-instagram fa-lg"></i>
+                  @ribeiroambientesplanejados
+                </a>
+              </p>
+
+              <p>
+                <a href="https://www.instagram.com/jefferson_ribeero?igsh=cHhkYjV0bTl1dm9r" target="_blank"
+                  class="insta icon  me-3"> <i class="fab fa-instagram fa-lg"></i>
+                  @jefferson_ribeero
+                </a>
+              </p>
+
+              <p>
+                <a href="https://www.instagram.com/anaafreitas?igsh=dDdndjhkNHFiNzdx" target="_blank"
+                  class="insta icon me-3"> <i class="fab fa-instagram fa-lg"></i>
+                  @anaafreitas
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Linha horizontal -->
+          <hr class=" linha mb-4">
+
+          <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+              <p class="text-white">© 2025 Desenvolvido por Isabelly Camargo. Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Ícones Font Awesome (necessário para os ícones) -->
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <button id="btnTopo" title="Voltar ao topo">
+        ↑
       </button>
 
-      <!-- CLASSIFICAÇÕES DA PÁGINA DO MENU -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="d-flex navbar-nav align-items-center gap-4 ms-auto  ">
-
-          <li class="nav-item">
-            <a href="#categoria" class="icon-text">
-              <i class=" bi-tags-fill "></i>
-              <span>Projetos</span>
-            </a>
-          </li>
-
-           <li class="nav-item">
-            <a href="#sobre-mim" class="icon-text">
-              <i class="bi bi-person-lines-fill "></i>
-              <span>Sobre Nós</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#feedback" class="icon-text">
-              <i class=" bi-chat-dots-fill"></i>
-              <span>Feedback</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#localizacao" class="icon-text">
-              <i class=" bi-geo-alt-fill"></i>
-              <span>Localização</span>
-            </a>
-          </li>
-
-          <!-- UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU -->
-          <div class="underline"></div>
-
-          <!-- BOTÃO CTA NO MENU -->
-          <a href="formulario.php" class="btn btn-orcamento">Faça seu orçamento</a>
-
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <!-- CARROSEL DE IMAGENS  -->
-  <div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
-
-    <div class="carousel-inner h-620">
-
-      <div class="carousel-item">
-        <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="d-block w-100"
-          alt="imagem do projeto">
-      </div>
-
-      <div class="carousel-item">
-        <img src="fotos/carrossel-menu/2b9e7e37-9923-4bff-9684-b3c8f1818b43.JPG" class="d-block w-100"
-          alt="iamgem do projeto">
-      </div>
-
-      <div class="carousel-item active ">
-        <img src="fotos/carrossel-menu/855b3222-db65-4bbd-b865-c1834a81cefc.JPG" class="d-block w-100"
-          alt="iamgem do projeto">
-      </div>
-
-      <div class="carousel-item ">
-        <img src="fotos/carrossel-menu/95075929-0a23-4865-a143-1e8f8fec32a1.JPG" class="d-block w-100"
-          alt="iamgem do projeto">
-      </div>
-
-    </div>
-
-  </div>
-
-   <!-- CATEGORIAS -->
-  <section id="categoria">
-
-    <div class="container text-center my-5 ">
-
-      <h2 class="mb-4  categorias">Conheça ambientes já transformados!</h2>
-
-      <p class="slogan">"Planejando ambientes, realizando sonhos."</p>
-
-      <div class="carousel-wrapper"
-        style="position: relative; display: flex; align-items: center; justify-content: center;">
-
-        <button class="btn rounded-circle shadow" type="button" id="btn-prev">
-          <i class="bi bi-chevron-left fs-4"></i>
-        </button>
-
-        <div class="custom-carousel" id="categoryCarousel"
-          style="display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 20px; scrollbar-width: none; -ms-overflow-style: none;">
-          
-          <!-- Seus cards -->
-          <div class="category-card" style="min-width: 200px;">
-            <a href="galeria.html?categoria=banheiro" class="text-decoration-none text-dark">
-
-              <img
-                src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
-                class="card-img-top category-img" alt="Banheiro" style="width: 100%;">
-
-              <div class="card-body p-2 text-center">
-                <p class="mb-0 Categoria-p">Banheiro</p>
-              </div>
-
-            </a>
-          </div>
-
-          <div class="category-card" style="min-width: 200px;">
-            <a href="galeria.html?categoria=quarto" class="text-decoration-none text-dark">
-
-              <img
-                src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
-                class="card-img-top category-img" alt="Quarto" style="width: 100%;">
-
-              <div class="card-body p-2 text-center">
-                <p class="mb-0 Categoria-p">Quarto</p>
-              </div>
-
-            </a>
-          </div>
-
-          <div class="category-card" style="min-width: 200px;">
-            <a href="galeria.html?categoria=cozinha" class="text-decoration-none text-dark">
-
-              <img
-                src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
-                class="card-img-top category-img" alt="Cozinha" style="width: 100%;">
-
-              <div class="card-body p-2 text-center">
-                <p class="mb-0 Categoria-p">Cozinha</p>
-              </div>
-
-            </a>
-          </div>
-
-          <div class="category-card" style="min-width: 200px;">
-            <a href="galeria.html?categoria=sala" class="text-decoration-none text-dark">
-
-              <img
-                src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
-                class="card-img-top category-img" alt="Sala" style="width: 100%;">
-
-              <div class="card-body p-2 text-center">
-                <p class="mb-0 Categoria-p">Sala</p>
-              </div>
-
-            </a>
-          </div>
-
-          <div class="category-card" style="min-width: 200px;">
-            <a href="galeria.html?categoria=comercial" class="text-decoration-none text-dark">
-
-              <img
-                src="https://finger.ind.br/wp-content/uploads/2022/05/5-dicas-para-voce-que-esta-pensando-em-contratar-moveis-planejados-2-1024x683.jpg"
-                class="card-img-top category-img" alt="Escritório" style="width: 100%;">
-
-              <div class="card-body p-2 text-center">
-                <p class="mb-0 Categoria-p">Comercial</p>
-              </div>
-
-            </a>
-          </div>
-        </div>
-
-        <button class="btn  rounded-circle shadow" type="button" id="btn-next">
-          <i class="bi bi-chevron-right fs-4"></i>
-        </button>
-
-      </div>
-
-       <div>
-         <a href="formulario.php" class="btn  btn-orcamento-categoria">Faça seu orçamento</a>
-      </div>
-
-    </div>
-    
-  </section>
-  <!-- FAIXA VERDE COM AS IMAGENS DE UM PROJETO -->
-  <section class="position-relative">
-
-    <div class="green-bar">
-      <h1>Processos</h1>
-      <p class="l">A importância dos processos em móveis planejados está na <br> garantia de um produto final que
-        combina funcionalidade, <br> qualidade e design personalizado para melhor atender você!</p>
-    </div>
-
-    <div class="image-overlays">
-      <img src="fotos/processos/743709CC-F0FF-491C-BEF2-DA3854B7E672.PNG" class="img-block img-1" alt="img1" />
-      <img src="fotos/processos/WhatsApp Image 2025-05-29 at 10.27.55.jpeg" class="img-block img-2" alt="img2" />
-      <img src="fotos/processos/855b3222-db65-4bbd-b865-c1834a81cefc.JPG" class="img-block img-3" alt="img3" />
-    </div>
-  </section>
-
- <!-- PARTE QUE FALA SOBRE O DONO E SOBRE A EMPRESA -->
-
-  <section id="sobre-mim">
-    <div class="container">
-
-      <div class="imagem">
-        <img src="fotos/sobre-nos/jefferson.jpg" alt="Foto sobre mim">
-      </div>
-
-      <div class="conteudo">
-        <h2 class="sobre">Nossa Identidade</h2>
-        <h3 class="sobre">Jefferson Ribeiro</h3>
-        <p>
-         Dono da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Busco sempre evoluir  pessoal e profissionalmente, com foco... <a href="sobreNos.html" class="ver-mais">Saiba mais</a>
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FEEDBACK -->
-  <section id="feedback">
-    <div class="feedback-section">
-
-      <h2 class="feed">O que nossos clientes dizem!</h2>
-
-      <div class="feedback-track" id="feedbackTrack">
-
-        <div class="feedback-card">
-          <div class="line-vertical"></div>
-
-          <img
-            src="fotos/feedback/Maria.jpeg"
-            alt="Pessoa 1" class="avatar">
-
-          <div class="content">
-            <p class="feedback-maria ">"Eu amei minha cozinha, recomendo esse trabalho maravilhoso."</p>
-            <p class="nome">Maria Piruk </p>
-          </div>
-
-        </div>
-       
-        <div class="feedback-card">
-          <div class="line-vertical"></div>
-
-          <img
-            src="fotos/feedback/willian.jpeg"
-            alt="Pessoa 2" class="avatar">
-
-          <div class="content">
-            <p class="feedback-wii">"Ficou perfeito, qualidade, cuidado em cada detalhe mesmo eu sendo exigente, entrega antes do prazo, recomendo com certeza"</p>
-            <p class="nome">Willian Trento</p>
-          </div>
-
-        </div>
-
-        <div class="feedback-card">
-          <div class="line-vertical"></div>
-
-          <img
-            src="fotos/feedback/mari.jpeg"
-            alt="Pessoa 2" class="avatar">
-
-          <div class="content">
-            <p class="feedback-mari">"Um trabalho de qualidade  feito com muito carinho e muito capricho em cada detalhe."</p>
-            <p class="nome">Marinete Ferreira</p>
-          </div>
-
-        </div>
-
-        <div class="feedback-card">
-          <div class="line-vertical"></div>
-
-          <img
-            src="fotos/feedback/andreo.jpeg"
-            alt="Pessoa 2" class="avatar">
-
-          <div class="content">
-            <p class="feedback-andreo">"Os móveis ficaram lindos, super funcionais e bem planejados para o espaço!"</p>
-            <p class="nome">Andreo Santana</p>
-          </div>
-
-        </div>
-
-        <div class="feedback-card">
-          <div class="line-vertical"></div>
-
-          <img
-            src="fotos/feedback/sid.jpeg"
-            alt="Pessoa 1" class="avatar">
-
-          <div class="content">
-            <p class="feedback-sid ">"Parabéns pessoal ficou muito bom, os irmaos da igreja amaram, ficou lindo, uniu beleza e custos. Super indicamos, gratidão. 🙏"</p>
-            <p class="nome">Siderlei Dias</p>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCALIZAÇÃO -->
-  <section id="localizacao">
-
-    <h2 class="onde">Onde nos encontrar?</h2>
-    
-    <p class="endereco">
-      Endereço: Vila Rural Andorinha, Rua Aparecida Bernardo Valarini (Casa de esquina), Araruna - BR
-    </p>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.411909899734!2d-52.5136421!3d-23.922434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed6f00001c1a21%3A0x9fa0bab7e9b0f8e0!2sRibeiro%20Ambientes%20Planejados!5e1!3m2!1spt-BR!2sbr!4v1748872670819!5m2!1spt-BR!2sbr"
-      width="95%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
-
-    <div>
-      <a href="formulario.php" class="btn  btn-orcamento-localizacao">Faça seu orçamento</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg- pt-5 pb-4">
-    <div class="container text-md-left">
-      <div class="row text-md-left">
-
-        <!-- Logo e descrição -->
-        <div class="logodescriçao col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
-          <img src="fotos/logo/logo.png" alt="Logo" class="logo-footer">
-          <h5 class=" nomeloja mb-4 font-weight-bold "><span style="font-size: 40px;">A</span>mbientes <span
-              style="font-size: 40px;">P</span>lanejados</h5>
-          <p class="loja">"Planejando ambientes, realizando sonhos."</p>
-        </div>
-
-        <!-- Links úteis -->  
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="outro mb-4 font-weight-bold ">Links</h5>
-          <p class="outros"><a href="#" class="link text-decoration-none">Início</a></p>
-          <p class="outros"><a href="#" class="link text-decoration-none">Sobre Nós</a></p>
-          <p class="outros"><a href="#" class="link text-decoration-none">Categoria</a></p>
-          <p class="outros"><a href="#" class="link text-decoration-none">Feedback</a></p>
-          <p class="outros"><a href="#" class="link text-decoration-none">Localização</a></p>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="outro mb-4">Contato</h5>
-          <p class="outros"><i class="">Endereço: Vila Rural Andorinha, Rua Aparecida Bernardo Valarini (Casa de
-              esquina), Araruna - BR</i></p>
-
-        </div>
-
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-          <h5 class="outro mb-4 font-weight-bold ">Siga-nos</h5>
-          <p>
-            <a href="https://www.instagram.com/ribeiroambientesplanejados" target="_blank" class="insta me-3">
-              <i class="fab fa-instagram fa-lg"></i>
-              @ribeiroambientesplanejados
-            </a>
-          </p>
-          <p>
-            <a href="https://www.instagram.com/jefferson_ribeero?igsh=cHhkYjV0bTl1dm9r" target="_blank"
-              class="insta icon  me-3"> <i class="fab fa-instagram fa-lg"></i>
-              @jefferson_ribeero
-            </a>
-          </p>
-          <p>
-            <a href="https://www.instagram.com/anaafreitas?igsh=dDdndjhkNHFiNzdx" target="_blank"
-              class="insta icon me-3"> <i class="fab fa-instagram fa-lg"></i>
-              @anaafreitas
-            </a>
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Linha horizontal -->
-      <hr class=" linha mb-4">
-
-      <div class="row align-items-center">
-        <div class="col-md-7 col-lg-8">
-          <p class="text-white">© 2025 Desenvolvido por Isabelly Camargo. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Ícones Font Awesome (necessário para os ícones) -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <button id="btnTopo" title="Voltar ao topo">
-    ↑
-  </button>
-
-  <script>
-    const btn = document.getElementById("btnTopo");
-
-    // Mostrar o botão quando descer 100px da parte de cima
-    window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-
-    // Quando clicar, volta pro topo suavemente
-    btn.onclick = function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>
-
-  <!-- UNDERLINE DO MENU -->
-  <script>
-    const menu = document.getElementById('navbarSupportedContent');
-    const items = menu.querySelectorAll('.nav-item');
-    const underline = menu.querySelector('.underline');
-
-    function moveUnderline(target) {
-
-      underline.style.width = `${target.offsetWidth}px`;
-      underline.style.left = `${target.offsetLeft}px`;
-    }
-
-    items.forEach(item => {
-      item.addEventListener('click', () => moveUnderline(item));
-    });
-
-    window.addEventListener('load', () => {
-      moveUnderline(items[0]);
-    });
-  </script>
-
-  <!-- HAMBURGUER DO RESPONSIVO -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
-      const btnOrcamento = document.querySelector(".btn-orcamento");
-      const navbarCollapse = document.querySelector(".navbar-collapse");
-
-      navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          if (navbarCollapse.classList.contains("show")) {
-            new bootstrap.Collapse(navbarCollapse).hide();
+      <script>
+
+        const btn = document.getElementById("btnTopo");
+        // Mostrar o botão quando descer 100px da parte de cima
+        window.onscroll = function () {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
           }
-        });
-      });
+        };
 
-      if (btnOrcamento) {
-        btnOrcamento.addEventListener("click", function () {
-          if (navbarCollapse.classList.contains("show")) {
-            new bootstrap.Collapse(navbarCollapse).hide();
-          }
-        });
-      }
-    });
-  </script>
+        // Quando clicar, volta pro topo suavemente
+        btn.onclick = function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
 
-  <!-- UNDERLINE DO SOBRE NÓS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const tabs = document.querySelectorAll(".tab");
-      const contents = document.querySelectorAll(".conteudo-tab");
-      const underline = document.querySelector(".tabs .underline-sobre");
+      </script>
 
-      function moveUnderline(tab) {
-        underline.style.width = `${tab.offsetWidth}px`;
-        underline.style.left = `${tab.offsetLeft}px`;
-      }
+      <!-- UNDERLINE DO MENU -->
+      <script>
 
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          // Alternar abas
-          tabs.forEach(t => t.classList.remove("ativo"));
-          contents.forEach(c => c.style.display = "none");
+        const menu = document.getElementById('navbarSupportedContent');
+        const items = menu.querySelectorAll('.nav-item');
+        const underline = menu.querySelector('.underline');
 
-          tab.classList.add("ativo");
-          const target = tab.getAttribute("data-tab");
-          document.getElementById(target).style.display = "block";
+        function moveUnderline(target) {
 
-          moveUnderline(tab);
-        });
-      });
-
-      // Inicializa underline e conteúdo ao carregar
-      const activeTab = document.querySelector(".tab.ativo");
-      if (activeTab) {
-        moveUnderline(activeTab);
-        document.getElementById(activeTab.getAttribute("data-tab")).style.display = "block";
-      }
-
-      // Atualiza underline se redimensionar a janela (resolução muda)
-      window.addEventListener("resize", () => {
-        const activeTab = document.querySelector(".tab.ativo");
-        if (activeTab) moveUnderline(activeTab);
-      });
-    });
-  </script>
-
-  <!-- CATEGORIAS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const carousel = document.getElementById("categoryCarousel");
-
-      function duplicateCards() {
-        const cards = Array.from(carousel.querySelectorAll(".category-card"));
-        const originals = [...cards];
-
-        // Duplicar ao final
-        originals.forEach(card => {
-          const clone = card.cloneNode(true);
-          carousel.appendChild(clone);
-        });
-
-        // Duplicar ao início
-        originals.slice().reverse().forEach(card => {
-          const clone = card.cloneNode(true);
-          carousel.insertBefore(clone, carousel.firstChild);
-        });
-      }
-
-      duplicateCards();
-
-      const card = carousel.querySelector(".category-card");
-      const cardWidth = card.offsetWidth + 20;
-      const totalOriginalCards = carousel.querySelectorAll(".category-card").length / 3;
-
-      const startScroll = cardWidth * totalOriginalCards;
-      carousel.scrollLeft = startScroll;
-
-      // Função que garante que o scroll nunca chegue perto do fim
-      function loopScrollCheck() {
-        const current = carousel.scrollLeft;
-        const max = cardWidth * totalOriginalCards * 2;
-        const min = 0;
-
-        // Se muito à esquerda → volta para o centro equivalente
-        if (current <= cardWidth) {
-          carousel.style.scrollBehavior = "auto";
-          carousel.scrollLeft = current + (cardWidth * totalOriginalCards);
-          requestAnimationFrame(() => {
-            carousel.style.scrollBehavior = "smooth";
-          });
+          underline.style.width = `${target.offsetWidth}px`;
+          underline.style.left = `${target.offsetLeft}px`;
         }
 
-        // Se muito à direita → volta para o centro equivalente
-        if (current >= max - cardWidth) {
-          carousel.style.scrollBehavior = "auto";
-          carousel.scrollLeft = current - (cardWidth * totalOriginalCards);
-          requestAnimationFrame(() => {
-            carousel.style.scrollBehavior = "smooth";
+        items.forEach(item => {
+          item.addEventListener('click', () => moveUnderline(item));
+        });
+
+        window.addEventListener('load', () => {
+          moveUnderline(items[0]);
+        });
+
+      </script>
+
+      <!-- HAMBURGUER DO RESPONSIVO -->
+      <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
+          const btnOrcamento = document.querySelector(".btn-orcamento");
+          const navbarCollapse = document.querySelector(".navbar-collapse");
+
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              if (navbarCollapse.classList.contains("show")) {
+                new bootstrap.Collapse(navbarCollapse).hide();
+              }
+            });
           });
-        }
-      }
 
-      carousel.addEventListener("scroll", loopScrollCheck);
+          if (btnOrcamento) {
+            btnOrcamento.addEventListener("click", function () {
+              if (navbarCollapse.classList.contains("show")) {
+                new bootstrap.Collapse(navbarCollapse).hide();
+              }
+            });
+          }
+        });
 
-      // Botões
-      document.getElementById("btn-prev").addEventListener("click", () => {
-        carousel.scrollLeft -= cardWidth;
-      });
+      </script>
 
-      document.getElementById("btn-next").addEventListener("click", () => {
-        carousel.scrollLeft += cardWidth;
-      });
-    });
-  </script>
+      <!-- UNDERLINE DO SOBRE NÓS -->
+      <script>
 
+        document.addEventListener("DOMContentLoaded", function () {
+          const tabs = document.querySelectorAll(".tab");
+          const contents = document.querySelectorAll(".conteudo-tab");
+          const underline = document.querySelector(".tabs .underline-sobre");
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const track = document.getElementById('feedbackTrack');
-      const cards = Array.from(track.children);
+          function moveUnderline(tab) {
+            underline.style.width = `${tab.offsetWidth}px`;
+            underline.style.left = `${tab.offsetLeft}px`;
+          }
 
-      // Clona os cards para criar o efeito de loop infinito
-      cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
-      });
-    });
-  </script>
+          tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+              // Alternar abas
+              tabs.forEach(t => t.classList.remove("ativo"));
+              contents.forEach(c => c.style.display = "none");
 
+              tab.classList.add("ativo");
+              const target = tab.getAttribute("data-tab");
+              document.getElementById(target).style.display = "block";
+
+              moveUnderline(tab);
+            });
+          });
+
+          // Inicializa underline e conteúdo ao carregar
+          const activeTab = document.querySelector(".tab.ativo");
+          if (activeTab) {
+            moveUnderline(activeTab);
+            document.getElementById(activeTab.getAttribute("data-tab")).style.display = "block";
+          }
+
+          // Atualiza underline se redimensionar a janela (resolução muda)
+          window.addEventListener("resize", () => {
+            const activeTab = document.querySelector(".tab.ativo");
+            if (activeTab) moveUnderline(activeTab);
+          });
+        });
+
+      </script>
+
+      <!-- CATEGORIAS -->
+      <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const carousel = document.getElementById("categoryCarousel");
+
+          function duplicateCards() {
+            const cards = Array.from(carousel.querySelectorAll(".category-card"));
+            const originals = [...cards];
+
+            // Duplicar ao final
+            originals.forEach(card => {
+              const clone = card.cloneNode(true);
+              carousel.appendChild(clone);
+            });
+
+            // Duplicar ao início
+            originals.slice().reverse().forEach(card => {
+              const clone = card.cloneNode(true);
+              carousel.insertBefore(clone, carousel.firstChild);
+            });
+          }
+
+          duplicateCards();
+
+          const card = carousel.querySelector(".category-card");
+          const cardWidth = card.offsetWidth + 20;
+          const totalOriginalCards = carousel.querySelectorAll(".category-card").length / 3;
+
+          const startScroll = cardWidth * totalOriginalCards;
+          carousel.scrollLeft = startScroll;
+
+          // Função que garante que o scroll nunca chegue perto do fim
+          function loopScrollCheck() {
+            const current = carousel.scrollLeft;
+            const max = cardWidth * totalOriginalCards * 2;
+            const min = 0;
+
+            // Se muito à esquerda → volta para o centro equivalente
+            if (current <= cardWidth) {
+              carousel.style.scrollBehavior = "auto";
+              carousel.scrollLeft = current + (cardWidth * totalOriginalCards);
+              requestAnimationFrame(() => {
+                carousel.style.scrollBehavior = "smooth";
+              });
+            }
+
+            // Se muito à direita → volta para o centro equivalente
+            if (current >= max - cardWidth) {
+              carousel.style.scrollBehavior = "auto";
+              carousel.scrollLeft = current - (cardWidth * totalOriginalCards);
+              requestAnimationFrame(() => {
+                carousel.style.scrollBehavior = "smooth";
+              });
+            }
+          }
+
+          carousel.addEventListener("scroll", loopScrollCheck);
+
+          // Botões
+          document.getElementById("btn-prev").addEventListener("click", () => {
+            carousel.scrollLeft -= cardWidth;
+          });
+
+          document.getElementById("btn-next").addEventListener("click", () => {
+            carousel.scrollLeft += cardWidth;
+          });
+        });
+
+      </script>
+
+      <script>
+
+        window.addEventListener('DOMContentLoaded', () => {
+          const track = document.getElementById('feedbackTrack');
+          const cards = Array.from(track.children);
+
+          // Clona os cards para criar o efeito de loop infinito
+          cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            track.appendChild(clone);
+          });
+        });
+
+      </script>
 
 </body>
 
