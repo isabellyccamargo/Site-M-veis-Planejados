@@ -82,6 +82,35 @@
         </div>
       </div>
 
+      <?php
+        $categoriasDir = 'fotos/categorias';
+        $cardsHtml = '<div></div>';
+
+        if (is_dir($categoriasDir)) {
+            $pastas = scandir($categoriasDir);
+
+            foreach ($pastas as $pasta) {
+                if ($pasta === '.' || $pasta === '..') continue;
+
+                $caminhoCapa = "$categoriasDir/$pasta/capa/capa.jpg";
+
+                if (is_dir("$categoriasDir/$pasta") && file_exists($caminhoCapa)) {
+                    // Nome bonito (ex: "cozinha-moderna" => "Cozinha Moderna")
+                    $nomeFormatado = ucwords(str_replace('-', ' ', $pasta));
+
+                    $cardsHtml .= '
+                      <div class="category-card" style="min-width: 140px;">
+                        <a href="galeria.php?categoria=' . urlencode($pasta) . '" class="text-decoration-none ">
+                          <img src="' . $caminhoCapa . '" class="category-img"
+                            alt="' . htmlspecialchars($nomeFormatado) . '" style="width: 100%; height: 90px; object-fit: cover;">
+                          <p class="nome small mt-2">' . htmlspecialchars($nomeFormatado) . '</p>
+                        </a>
+                      </div>';
+                }
+            }
+        }
+      ?>
+
       <div class=" container my-4">
 
         <section id="categoria-menu" class="my-4">
@@ -96,42 +125,8 @@
               <div class="custom-carousel" id="categoryCarouselMini"
                 style="display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 15px; padding: 10px 0; scrollbar-width: none; -ms-overflow-style: none;">
 
-                <!-- Card compacto -->
-                <div class="category-card" style="min-width: 140px;">
-                  <a href="galeria.html?categoria=banheiro" class="text-decoration-none ">
-                    <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="category-img"
-                      alt="Banheiro" style="width: 100%; height: 90px; object-fit: cover;">
-                    <p class="nome small mt-2">Banheiro</p>
-                  </a>
-                </div>
-                <div class="category-card" style="min-width: 140px;">
-                  <a href="galeria.html?categoria=cozinha" class="text-decoration-none ">
-                    <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="category-img"
-                      alt="Cozinha" style="width: 100%; height: 90px; object-fit: cover;">
-                    <p class="nome small mt-2">Cozinha</p>
-                  </a>
-                </div>
-                <div class="category-card" style="min-width: 140px;">
-                  <a href="galeria.html?categoria=quarto" class="text-decoration-none ">
-                    <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="category-img"
-                      alt="Quarto" style="width: 100%; height: 90px; object-fit: cover;">
-                    <p class="nome small mt-2">Quarto</p>
-                  </a>
-                </div>
-                <div class="category-card" style="min-width: 140px;">
-                  <a href="galeria.html?categoria=sala" class="text-decoration-none ">
-                    <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="category-img" alt="Sala"
-                      style="width: 100%; height: 90px; object-fit: cover;">
-                    <p class=" nome small mt-2">Sala</p>
-                  </a>
-                </div>
-                <div class="category-card" style="min-width: 140px;">
-                  <a href="galeria.html?categoria=comercial" class="text-decoration-none ">
-                    <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="category-img"
-                      alt="Comercial" style="width: 100%; height: 90px; object-fit: cover;">
-                    <p class="nome small mt-2">Comercial</p>
-                  </a>
-                </div>
+                <?= $cardsHtml ?>
+
               </div>
 
               <button class="btn  rounded-circle shadow" type="button" id="btn-next">
@@ -142,11 +137,46 @@
           </div>
         </section>
 
+        <?php
+          // Recebe o nome da categoria da URL
+          $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : null;
+          $galeriaHtml = '';
+
+          if ($categoria) {
+              $pastaCategoria = "fotos/categorias/" . basename($categoria); // segurança básica
+              if (is_dir($pastaCategoria)) {
+                  $arquivos = scandir($pastaCategoria);
+
+                  foreach ($arquivos as $arquivo) {
+                      if (in_array($arquivo, ['.', '..', 'capa.jpg'])) continue; // ignora capa e diretórios
+
+                      $caminhoImagem = "$pastaCategoria/$arquivo";
+                      $extensao = pathinfo($caminhoImagem, PATHINFO_EXTENSION);
+
+                      // Verifica se é uma imagem
+                      if (in_array(strtolower($extensao), ['jpg', 'jpeg', 'png', 'webp', 'gif'])) {
+                          $galeriaHtml .= '
+                          <div class="col-6 col-md-3 foto-item" data-categoria="' . htmlspecialchars($categoria) . '">
+                            <img src="' . $caminhoImagem . '" alt="" class="gallery-img" />
+                          </div>';
+                      }
+                  }
+              } else {
+                  $galeriaHtml = '<p>Categoria não encontrada.</p>';
+              }
+          } else {
+              $galeriaHtml = '<p>Nenhuma categoria selecionada.</p>';
+          }
+        ?>
+
         <!-- Galeria -->
         <div class="row g-4" id="galeria">
 
-          <!-- Fotos de exemplo -->
-          <!-- Banheiro -->
+        <div class="row g-3">
+          <?= $galeriaHtml ?>
+        </div>
+
+          <!-- 
           <div class="col-6 col-md-3 foto-item" data-categoria="banheiro">
             <img src="https://picsum.photos/id/1015/600/400" alt="" class="gallery-img" />
           </div>
@@ -154,7 +184,7 @@
             <img src="https://picsum.photos/id/1016/600/400" alt="" class="gallery-img" />
           </div>
 
-          <!-- Cozinha -->
+           Cozinha
           <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
             <img src="fotos/feedback/andreo.jpeg" alt="" class="gallery-img" />
           </div>
@@ -162,7 +192,7 @@
             <img src="https://picsum.photos/id/1033/600/400" alt="" class="gallery-img" />
           </div>
 
-          <!-- Quarto -->
+          Quarto 
           <div class="col-12 col-md-3 foto-item" data-categoria="quarto" style="display:none;">
             <img src="https://picsum.photos/id/1040/600/400" alt="Quarto 1" class="gallery-img" />
           </div>
@@ -170,7 +200,7 @@
             <img src="https://picsum.photos/id/1050/600/400" alt="Quarto 2" class="gallery-img" />
           </div>
 
-          <!-- Sala -->
+           Sala 
           <div class="col-12 col-md-3 foto-item" data-categoria="sala" style="display:none;">
             <img src="https://picsum.photos/id/1060/600/400" alt="Sala 1" class="gallery-img" />
           </div>
@@ -178,14 +208,14 @@
             <img src="https://picsum.photos/id/1070/600/400" alt="Sala 2" class="gallery-img" />
           </div>
 
-          <!-- Comercial -->
+           Comercial 
           <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
             <img src="https://picsum.photos/id/1080/600/400" alt="Comercial 1" class="gallery-img" />
           </div>
           <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
             <img src="https://picsum.photos/id/1090/600/400" alt="Comercial 2" class="gallery-img" />
           </div>
-
+            -->
         </div>
 
       </div>
