@@ -78,52 +78,83 @@
             </div>
         </div>
     </div>
-
-
+    
+    
     <div class="container-sm">
 
-        <form class="row g-3 " action="servicos/envia-email.php" method="post">
-            <div class="col-12">
+    <div>
+        <h2 class="solicite">Solicite seu orçamento sem compromisso!</h2>
+        <h3 class="entreEmContato">Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</h3>
+   </div>
+        <form class="row g-3 justify-content-center needs-validation" action="servicos/envia-email.php" method="post" novalidate>
+            <div class="col-8 ">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="João da Silva">
+                <input type="text" class="form-control" id="nome" name="nome"   placeholder="Nome completo" required pattern="[A-Za-zÀ-ÿ\s]+">
+                 <div class="invalid-feedback">
+                    Campo Obrigatório!
+                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-8">
                 <label for="telefone" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="">
+                <input type="tel" class="form-control" id="telefone" name="telefone" required  placeholder="(00) 00000-0000" inputmode="numeric">
+                <div class="invalid-feedback">
+                    Campo Obrigatório!
+                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-8">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="">
+                <input type="email" class="form-control" id="email" name="email" required placeholder="Seuemail@gmail.com" >
+                <div class="invalid-feedback">
+                    Campo Obrigatório!
+                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-8">
                 <label for="endereco" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua...">
+                <input type="text" class="form-control" id="endereco" name="endereco" required placeholder="Rua...">
+                 <div class="invalid-feedback">
+                    Campo Obrigatório!
+                 </div>
             </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">Estado</label>
-                <select id="estado" class="form-select" name="estado">
-                    <option selected>Selecione</option>
-                    <option>Paraná</option>
-                    <option>São Paulo</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="cidade" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade">
-            </div>
-            <div class="col-md-2">
-                <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" name="cep">
-            </div>
-            <div class="col-12">
+                <div class="col-8 mx-auto d-flex justify-content-between flex-wrap">
+                    <div class="flex-fill col-3">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select id="estado" class="form-select" name="estado" required>
+                            <option selected disabled value="">Selecione</option>
+                            <option>Paraná</option>
+                            <option>São Paulo</option>
+                            <option>Mato Grosso</option>
+                        </select>
+                        <div class="invalid-feedback">
+                         Campo Obrigatório!
+                        </div>
+                    </div>
+                    <div class=" flex-fill col-md-3">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" required  name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+">
+                         <div class="invalid-feedback">
+                         Campo Obrigatório!
+                         </div>
+                    </div>
+                    <div class="flex-fill col-md-2">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cep" required  name="cep" placeholder="00000-000" inputmode="numeric">
+                        <div class="invalid-feedback">
+                         Campo Obrigatório!
+                        </div>
+                    </div>
+              </div>
+            <div class="col-8">
                 <label for="texto" class="form-label">Mensagem</label>
-                <textarea type="text" class="form-control" id="texto" name="texto" placeholder="Informe alguns detalhes sobre a sua necessidade..."></textarea>
+                <textarea type="text" class="form-control" id="texto" name="texto" placeholder="Informe alguns detalhes sobre a sua necessidade..." required></textarea>
+                 <div class="invalid-feedback">
+                    Campo Obrigatório!
+                 </div>
             </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn">Enviar</button>
             </div>
-        </form>
+</form>
     </div>
 
     <!-- FOOTER -->
@@ -197,6 +228,78 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+ // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+
+<script>
+  // Bootstrap custom validation
+  (function () {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+
+    Array.from(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        // Validação custom e padrão
+        if (!form.checkValidity() || !emailGmailValido()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+
+  // Máscara telefone: (00) 00000-0000
+  document.getElementById('telefone').addEventListener('input', function (e) {
+    let v = e.target.value.replace(/\D/g, '')
+    v = v.replace(/^(\d{2})(\d)/g, '($1) $2')
+    v = v.replace(/(\d{5})(\d)/, '$1-$2')
+    e.target.value = v.slice(0, 15)
+  })
+
+  // Máscara CEP: 00000-000
+  document.getElementById('cep').addEventListener('input', function (e) {
+    let v = e.target.value.replace(/\D/g, '')
+    v = v.replace(/^(\d{5})(\d)/, '$1-$2')
+    e.target.value = v.slice(0, 9)
+  })
+
+  // Validação do e-mail para terminar em @gmail.com
+  function emailGmailValido() {
+    const email = document.getElementById('email')
+    if (!email.value.endsWith('@gmail.com')) {
+      email.setCustomValidity("O e-mail deve terminar com @gmail.com")
+      return false
+    } else {
+      email.setCustomValidity('')
+      return true
+    }
+  }
+
+  // Atualiza a validade enquanto digita
+  document.getElementById('email').addEventListener('input', function () {
+    emailGmailValido()
+  })
+</script>
 
 </body>
 
