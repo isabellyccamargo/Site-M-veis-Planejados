@@ -164,6 +164,7 @@ nav {
   font-size: 18px;
   font-family: "Marcellus", sans-serif;
   text-decoration: none;
+  width: 250px;
 }
 
 .btn-orcamento:hover {

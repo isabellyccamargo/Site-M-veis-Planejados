@@ -42,18 +42,46 @@
             </button>
 
             <!-- CLASSIFICAÇÕES DA PÁGINA DO MENU -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="d-flex navbar-nav align-items-center gap-4 ms-auto  ">
+             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="d-flex navbar-nav align-items-center gap-4 ms-auto  ">
 
-                    <!-- UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU -->
-                    <div class="underline"></div>
+              <li class="nav-item">
+                <a href="index.html#categoria" class="icon-text">
+                  <i class=" bi-tags-fill "></i>
+                  <span>Projetos</span>
+                </a>
+              </li>
 
-                    <!-- BOTÃO CTA NO MENU -->
-                    <a href="index.html" class="btn btn-orcamento">Voltar</a>
+              <li class="nav-item">
+                <a href="index.html#sobre-mim" class="icon-text">
+                  <i class="bi bi-person-lines-fill "></i>
+                  <span>Sobre Nós</span>
+                </a>
+              </li>
 
-                </ul>
+              <li class="nav-item">
+                <a href="index.html#feedback" class="icon-text">
+                  <i class=" bi-chat-dots-fill"></i>
+                  <span>Feedback</span>
+                </a>
+              </li>
 
-            </div>
+              <li class="nav-item">
+                <a href="index.html#localizacao" class="icon-text">
+                  <i class=" bi-geo-alt-fill"></i>
+                  <span>Localização</span>
+                </a>
+              </li>
+
+              <!-- UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU -->
+              <div class="underline"></div>
+
+              <!-- BOTÃO CTA NO MENU -->
+              <a href="formulario.php" class="btn btn-orcamento">Faça seu orçamento</a>
+
+            </ul>
+          </div>
+        </div>
         </div>
     </header>
 
@@ -91,7 +119,7 @@
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome"   placeholder="Nome completo" required pattern="[A-Za-zÀ-ÿ\s]+">
                  <div class="invalid-feedback">
-                    Campo Obrigatório!
+                    Campo Obrigatório! Apenas letras!
                  </div>
             </div>
             <div class="col-8">
@@ -105,18 +133,18 @@
                 <label for="email" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="email" name="email" required placeholder="Seuemail@gmail.com" >
                 <div class="invalid-feedback">
-                    Campo Obrigatório!
+                    Campo Obrigatório! Digite um email válido "seuemail@gmail.com".
                  </div>
             </div>
-            <div class="col-8">
+            <!-- <div class="col-8">
                 <label for="endereco" class="form-label">Endereço</label>
                 <input type="text" class="form-control" id="endereco" name="endereco" required placeholder="Rua...">
                  <div class="invalid-feedback">
                     Campo Obrigatório!
                  </div>
-            </div>
-                <div class="col-8 mx-auto d-flex justify-content-between flex-wrap">
-                    <div class="flex-fill col-3">
+            </div> -->
+                <div class="col-8 mx-auto d-flex justify-content-between flex-wrap gap-4">
+                    <div class="flex-fill col-2">
                         <label for="estado" class="form-label">Estado</label>
                         <select id="estado" class="form-select" name="estado" required>
                             <option selected disabled value="">Selecione</option>
@@ -128,9 +156,9 @@
                          Campo Obrigatório!
                         </div>
                     </div>
-                    <div class=" flex-fill col-md-3">
+                    <div class=" flex-fill col-md-2 ">
                         <label for="cidade" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" required  name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+">
+                        <input type="text" class="form-control" id="cidade" name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+">
                          <div class="invalid-feedback">
                          Campo Obrigatório!
                          </div>
@@ -229,11 +257,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
- // Example starter JavaScript for disabling form submissions if there are invalid fields
+ 
 (() => {
   'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
   const forms = document.querySelectorAll('.needs-validation')
 
   // Loop over them and prevent submission

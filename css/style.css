@@ -264,14 +264,15 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    color: #32391e;
+    background-color: #32391e !important;
+    color: #fff4d3;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
   }
 
   #btn-prev:hover,
   #btn-next:hover {
-    background-color: #32391e;
-    color: white;
+    color: #fff4d3;
+    transform: scale(1.00);
   }
 
   .btn-orcamento-categoria {
@@ -284,6 +285,7 @@
     text-decoration: none;
     margin-top: 20px;
     margin-bottom: 50PX;
+    width: 270px;
   }
 
   .btn-orcamento-categoria:hover {
@@ -291,7 +293,7 @@
     color: #f8e09a;
   }
 
-  /* FAIXA VERDE COM AS IMAGENS DE UM PROJETO */
+  /* Processos */
 
   .position-relative {
     margin-top: 60px;
@@ -306,7 +308,7 @@
   .green-bar {
     background-color: #32391e;
     color: #fff4d3;
-    height: 290px;
+    height: 280px;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -317,7 +319,7 @@
       color: #fbde85;
       font-weight: bold;
       font-family: "Marcellus", sans-serif;
-      margin-left: 280px;
+      margin-left: 210px;
       margin-bottom: 30px;
       padding-top: 40px;
     }
@@ -617,6 +619,7 @@
     color: #fff4d3;
     border-radius: 30px;
     font-size: 20px;
+    width: 270px;
     font-family: "Marcellus", sans-serif;
     text-decoration: none;
     margin-top: 40px;
@@ -865,7 +868,7 @@
       width: 100%;
 
       h1 {
-        margin-left: 120px;
+        margin-left: 55px;
         margin-bottom: 15px;
         padding-top: 15px;
         font-size: 36px;

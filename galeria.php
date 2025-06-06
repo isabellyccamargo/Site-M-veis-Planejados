@@ -43,26 +43,52 @@
           </button>
 
           <!-- CLASSIFICAÇÕES DA PÁGINA DO MENU -->
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="d-flex navbar-nav align-items-center gap-4 ms-auto  ">
+
+              <li class="nav-item">
+                <a href="index.html#categoria" class="icon-text">
+                  <i class=" bi-tags-fill "></i>
+                  <span>Projetos</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.html#sobre-mim" class="icon-text">
+                  <i class="bi bi-person-lines-fill "></i>
+                  <span>Sobre Nós</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.html#feedback" class="icon-text">
+                  <i class=" bi-chat-dots-fill"></i>
+                  <span>Feedback</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="index.html#localizacao" class="icon-text">
+                  <i class=" bi-geo-alt-fill"></i>
+                  <span>Localização</span>
+                </a>
+              </li>
 
               <!-- UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU -->
               <div class="underline"></div>
 
               <!-- BOTÃO CTA NO MENU -->
-              <a href="index.html#categoria" class="btn btn-orcamento">Voltar</a>
+              <a href="formulario.php" class="btn btn-orcamento">Faça seu orçamento</a>
 
             </ul>
-
           </div>
+        </div>
         </div>
       </header>
 
       <div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
         <div class="carousel-inner h-620">
-          <div class="orcamento-wrapper">
-            <a href="#orcamento" class="btn btn-orcamento-carrosel">Faça seu orçamento</a>
-          </div>
+        
           <div class="carousel-item">
             <img src="fotos/carrossel-menu/01da86bb-8aee-4e88-bce5-7942f3b7f0b5.JPG" class="d-block w-100"
               alt="imagem do projeto">

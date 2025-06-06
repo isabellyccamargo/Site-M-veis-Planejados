@@ -146,6 +146,7 @@
     font-size: 18px;
     font-family: "Marcellus", sans-serif;
     text-decoration: none;
+    width: 250px;
   }
 
   .btn-orcamento:hover {
@@ -229,7 +230,8 @@
 
   #sobre-mim .imagem {
     margin-top: 20px;
-     width: 37%;
+     width: 35%;
+    margin-right: 20px;
     /* imagem ocupa 40% do container */
     flex-shrink: 0;
     /* impede ela de encolher demais */
@@ -327,6 +329,24 @@
     transition: all 0.3s ease;
     width: 0;
     border-radius: 2px;
+  }
+
+  .btn-orcamento-sobre {
+     padding: 10px 30px;
+    background-color: #32391e;
+    color: #fff4d3;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    margin-bottom: 75px;
+    margin-left: 650px;
+    width: 250px;
+  }
+
+  .btn-orcamento-sobre:hover {
+    background-color: #4c5528;
+    color: #f8e09a;
   }
 
    /*FOOTER*/
@@ -458,9 +478,10 @@
     }
 
     #sobre-mim .imagem img {
-      height: 600px;
-      width: 90%;
-      margin-top: 80px;
+      height: 500px;
+      width: 100%;
+      margin-top: 130px;
+      margin-right: none;
     }
 
     .logodescriçao {
@@ -469,6 +490,10 @@
       .logo-footer {
         margin-left: 5px;
       }
+    }
+
+    .btn-orcamento-sobre {
+      margin-left: 390px;
     }
    }
 
