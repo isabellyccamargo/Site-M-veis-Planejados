@@ -121,7 +121,7 @@
                 $caminhoCapa = "$categoriasDir/$pasta/capa/capa.jpg";
 
                 if (is_dir("$categoriasDir/$pasta") && file_exists($caminhoCapa)) {
-                    // Nome bonito (ex: "cozinha-moderna" => "Cozinha Moderna")
+
                     $nomeFormatado = ucwords(str_replace('-', ' ', $pasta));
 
                     $cardsHtml .= '
@@ -169,7 +169,7 @@
           $galeriaHtml = '';
 
           if ($categoria) {
-              $pastaCategoria = "fotos/categorias/" . basename($categoria); // segurança básica
+              $pastaCategoria = "fotos/categorias/" . basename($categoria);
               if (is_dir($pastaCategoria)) {
                   $arquivos = scandir($pastaCategoria);
 
@@ -198,56 +198,16 @@
         <!-- Galeria -->
         <div class="row g-4" id="galeria">
 
-        <div class="row g-3">
-          <?= $galeriaHtml ?>
-        </div>
-
-          <!-- 
-          <div class="col-6 col-md-3 foto-item" data-categoria="banheiro">
-            <img src="https://picsum.photos/id/1015/600/400" alt="" class="gallery-img" />
-          </div>
-          <div class="col-6 col-md-3  foto-item" data-categoria="banheiro">
-            <img src="https://picsum.photos/id/1016/600/400" alt="" class="gallery-img" />
+          <div class="row g-3">
+            <?= $galeriaHtml ?>
           </div>
 
-           Cozinha
-          <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
-            <img src="fotos/feedback/andreo.jpeg" alt="" class="gallery-img" />
-          </div>
-          <div class="col-12 col-md-3 foto-item" data-categoria="cozinha" style="display:none;">
-            <img src="https://picsum.photos/id/1033/600/400" alt="" class="gallery-img" />
-          </div>
-
-          Quarto 
-          <div class="col-12 col-md-3 foto-item" data-categoria="quarto" style="display:none;">
-            <img src="https://picsum.photos/id/1040/600/400" alt="Quarto 1" class="gallery-img" />
-          </div>
-          <div class="col-12 col-md-3 foto-item" data-categoria="quarto" style="display:none;">
-            <img src="https://picsum.photos/id/1050/600/400" alt="Quarto 2" class="gallery-img" />
-          </div>
-
-           Sala 
-          <div class="col-12 col-md-3 foto-item" data-categoria="sala" style="display:none;">
-            <img src="https://picsum.photos/id/1060/600/400" alt="Sala 1" class="gallery-img" />
-          </div>
-          <div class="col-12 col-md-3 foto-item" data-categoria="sala" style="display:none;">
-            <img src="https://picsum.photos/id/1070/600/400" alt="Sala 2" class="gallery-img" />
-          </div>
-
-           Comercial 
-          <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
-            <img src="https://picsum.photos/id/1080/600/400" alt="Comercial 1" class="gallery-img" />
-          </div>
-          <div class="col-12 col-md-3 foto-item" data-categoria="comercial" style="display:none;">
-            <img src="https://picsum.photos/id/1090/600/400" alt="Comercial 2" class="gallery-img" />
-          </div>
-            -->
         </div>
 
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="js/script.js"></script>
+      <!-- <script src="js/script.js"></script> -->
 
       <!-- FOOTER -->
       <footer class="bg- pt-5 pb-4">
@@ -323,7 +283,7 @@
       </div>
 
       <!-- Ícones Font Awesome (necessário para os ícones) -->
-      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

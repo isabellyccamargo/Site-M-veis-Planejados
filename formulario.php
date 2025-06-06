@@ -131,7 +131,7 @@
             </div>
             <div class="col-8">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" required placeholder="Seuemail@gmail.com" >
+                <input type="email" class="form-control" id="email" name="email" required placeholder="seuemail@gmail.com" >
                 <div class="invalid-feedback">
                     Campo Obrigatório! Digite um email válido "seuemail@gmail.com".
                  </div>
