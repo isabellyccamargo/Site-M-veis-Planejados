@@ -1,0 +1,91 @@
+  /*FOOTER*/
+  footer {
+      background-color: #32391e !important;
+      font-family: "Marcellus", sans-serif !important;
+
+      .outro {
+          color: #ffce3a;
+          text-transform: none !important;
+          margin-top: 15px;
+          font-size: 20px;
+      }
+
+      .insta {
+          color: #f8e09a !important;
+          text-decoration: none;
+      }
+
+      .outros {
+          margin-top: 20px;
+          color: #f8e09a;
+      }
+
+      .link {
+          color: #f8e09a;
+      }
+
+      .link:hover {
+          transition: 1s;
+          color: #c29f36;
+      }
+
+      .logo-footer {
+          box-shadow: 0 0 6px 3px rgb(255, 219, 129);
+          width: 147px;
+          height: 147px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+          margin-left: 60px;
+      }
+
+      .loja {
+          margin-top: 20px;
+          color: #f8e09a;
+          font-size: 14px;
+      }
+
+      .nomeloja {
+          color: #ffce3a;
+          text-transform: none !important;
+          font-size: 25px;
+          top: 10%;
+      }
+
+      .linha {
+          color: #ffce3a;
+      }
+
+      .fab.fa-instagram {
+          font-size: 27px;
+          color: #e1306c;
+          /* Cor do Instagram */
+          margin-right: 15px;
+          margin-bottom: 40px;
+      }
+  }
+
+  /* PARA TELAS DE TABLETS */
+  @media (max-width: 1024px) {
+
+      /*FOOTER*/
+      .logodescriçao {
+          text-align: center;
+
+          .logo-footer {
+              margin-left: 5px;
+          }
+      }
+  }
+
+  /* PARA TELAS DE CELULARES */
+  @media (max-width: 480px) {
+
+      /*FOOTER*/
+      footer {
+          margin-top: 70px;
+      }
+
+      .logodescriçao {
+          text-align: center;
+      }
+  }

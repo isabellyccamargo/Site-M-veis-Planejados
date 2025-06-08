@@ -5,14 +5,15 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 
-body > footer {
+body>footer {
   margin-top: auto;
 }
 
@@ -25,97 +26,6 @@ body {
   background-color: #fff4d3;
   margin: 0;
   padding: 0;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.custom-header {
-  background-color: #fff4d3;
-  border-radius: 40px;
-  padding: 3px 5px;
-  margin: 40px auto;
-  max-width: 1300px;
-  z-index: 1001;
-  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* LOGO E NOME DA EMPRESA NO HEADER */
-.logo-container {
-  position: absolute;
-  /*posiciona um elemento de forma exata dentro do seu elemento pai*/
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  padding: 5px;
-  width: 80px;
-  height: 80px;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.logo-header {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-.icon-logo {
-  margin-left: 93px;
-  color: #32391e;
-  font-size: 22px;
-  font-weight: bold;
-  font-family: "Marcellus", sans-serif;
-}
-
-/* BOTAO Do HAMBURGUER NO RESPONSIVO */
-.custom-toggler {
-  background: none;
-  border: none;
-  padding: 5px;
-  margin-left: auto;
-  z-index: 1002;
-}
-
-.custom-toggler:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* CLASSIFICAÇÕES DA PÁGINA DO MENU */
-nav {
-  position: relative;
-  /* permite mover um elemento, mas mantendo seu espaço original na página */
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  padding: 10px 20px;
-  font-size: 18px;
-}
-
-.icon-text {
-  color: #32391e;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Marcellus", sans-serif;
-  padding: 8px 0;
-  text-decoration: none;
-  z-index: 1;
-}
-
-.icon-text:hover {
-  color: #b38e20;
 }
 
 #btnTopo {
@@ -153,23 +63,6 @@ nav {
 .custom-toggler:focus {
   outline: none;
   box-shadow: none;
-}
-
-/* BOTÃO CTA NO MENU */
-.btn-orcamento {
-  padding: 10px 30px;
-  background-color: #32391e;
-  color: #fff4d3;
-  border-radius: 30px;
-  font-size: 18px;
-  font-family: "Marcellus", sans-serif;
-  text-decoration: none;
-  width: 250px;
-}
-
-.btn-orcamento:hover {
-  background-color: #4c5528;
-  color: #f8e09a;
 }
 
 .carousel-container {
@@ -215,23 +108,18 @@ nav {
   display: block;
 }
 
-.btn-orcamento-carrosel {
-  padding: 10px 30px;
-  background-color: #32391e;
-  color: #fff4d3;
-  border-radius: 30px;
-  font-size: 18px;
-  font-family: "Marcellus", sans-serif;
-  text-decoration: none;
-  margin-bottom: 25px;
-}
-
-.btn-orcamento-carrosel:hover {
-  background-color: #4c5528;
-  color: #f8e09a;
-}
-
 /*GALERIA*/
+
+.servicos {
+  font-size: 50px;
+  color: #32391e;
+  font-weight: bold;
+  font-family: "Marcellus", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 40px;
+}
+
 .gallery-img {
   width: 100%;
   /* ocupa toda a largura da coluna */
@@ -286,72 +174,6 @@ nav {
   font-weight: bold;
 }
 
-/*FOOTER*/  
-footer {
-  background-color: #32391e !important;
-  font-family: "Marcellus", sans-serif !important;
-
-  .outro {
-    color: #ffce3a;
-    text-transform: none !important;
-    margin-top: 15px;
-    font-size: 20px;
-  }
-
-  .insta {
-    color: #f8e09a !important;
-    text-decoration: none;
-  }
-
-  .outros {
-    margin-top: 20px;
-    color: #f8e09a;
-  }
-
-  .link {
-    color: #f8e09a;
-  }
-
-  .link:hover {
-    transition: 1s;
-    color: #c29f36;
-  }
-
-  .logo-footer {
-    box-shadow: 0 0 6px 3px rgb(255, 219, 129);
-    width: 147px;
-    height: 147px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    margin-left: 60px;
-  }
-
-  .loja {
-    margin-top: 20px;
-    color: #f8e09a;
-    font-size: 14px;
-  }
-
-  .nomeloja {
-    color: #ffce3a;
-    text-transform: none !important;
-    font-size: 25px;
-    top: 10%;
-  }
-
-  .linha {
-    color: #ffce3a;
-  }
-
-  .fab.fa-instagram {
-    font-size: 27px;
-    color: #e1306c;
-    /* Cor do Instagram */
-    margin-right: 15px;
-    margin-bottom: 40px;
-  }
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -365,9 +187,10 @@ footer {
   text-align: center;
 }
 
-.modal.active{
+.modal.active {
   display: flex;
 }
+
 .modal-content {
   max-width: 90%;
   max-height: 80vh;
@@ -446,7 +269,7 @@ footer {
 
   .modal.active {
     display: flex;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     text-align: center;
@@ -474,13 +297,7 @@ footer {
     max-height: 90vh;
   }
 
-   .logodescriçao {
-      text-align: center;
 
-      .logo-footer {
-        margin-left: 5px;
-      }
-    }
 }
 
 @media (max-width: 480px) {
@@ -506,6 +323,10 @@ footer {
     /* ou 'flex' se estiver usando ícones */
   }
 
+  .servicos {
+    font-size: 36px;
+  }
+
   .modal {
     display: none;
   }
@@ -517,7 +338,7 @@ footer {
 
   .modal.active {
     display: flex;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     text-align: center;
@@ -529,15 +350,7 @@ footer {
     max-height: 60vh;
     border-radius: 8px;
     object-fit: contain;
-     text-align: center;
+    text-align: center;
   }
-
-  footer {
-            margin-top: 70px;
-          }
-
-          .logodescriçao {
-            text-align: center;
-    }
 
 }

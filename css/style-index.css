@@ -16,138 +16,6 @@
     padding: 0;
   }
 
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .custom-header {
-    background-color: #fff4d3;
-    border-radius: 40px;
-    padding: 3px 5px;
-    margin: 40px auto;
-    max-width: 1300px;
-    z-index: 1001;
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-  }
-
-  /* LOGO E NOME DA EMPRESA NO HEADER */
-  .logo-container {
-    position: absolute;
-    /*posiciona um elemento de forma exata dentro do seu elemento pai*/
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    padding: 5px;
-    width: 80px;
-    height: 80px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-  }
-
-  .logo-header {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-  }
-
-  .icon-logo {
-    margin-left: 93px;
-    color: #32391e;
-    font-size: 22px;
-    font-weight: bold;
-    font-family: "Marcellus", sans-serif;
-  }
-
-  /* BOTAO DO HAMBURGUER NO RESPONSIVO */
-  .custom-toggler {
-    background: none;
-    border: none;
-    padding: 5px;
-    margin-left: auto;
-    z-index: 1002;
-  }
-
-  .custom-toggler:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  /* CLASSIFICAÇÕES DA PÁGINA DO MENU */
-  nav {
-    position: relative;
-    /* permite mover um elemento, mas mantendo seu espaço original na página */
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav-item {
-    padding: 10px 20px;
-    font-size: 18px;
-  }
-
-  .icon-text {
-    color: #32391e;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Marcellus", sans-serif;
-    padding: 8px 0;
-    text-decoration: none;
-    z-index: 1;
-  }
-
-  .icon-text:hover {
-    color: #b38e20;
-  }
-
-  /* UNDERLINE QUE ESTA ABAIXO DAS CLASSIFICAÇÕES DO MENU */
-  .underline {
-    position: absolute;
-    /*posiciona um elemento de forma exata dentro do seu elemento pai*/
-    bottom: 0;
-    left: 0;
-    height: 5px;
-    width: 0;
-    background: #d0a523;
-    transition: all 0.3s ease;
-  }
-
-  .custom-toggler {
-    background: none;
-    border: none;
-    padding: 5px;
-    margin-left: auto;
-    z-index: 1002;
-  }
-
-  .custom-toggler:focus {
-    outline: none;
-    box-shadow: none;
-  }
-
-  /* BOTÃO CTA NO MENU */
-  .btn-orcamento {
-    padding: 10px 30px;
-    background-color: #32391e;
-    color: #fff4d3;
-    border-radius: 30px;
-    font-size: 20px;
-    font-family: "Marcellus", sans-serif;
-    text-decoration: none;
-  }
-
-  .btn-orcamento:hover {
-    background-color: #4c5528;
-    color: #f8e09a;
-  }
-
   /* CARROSEL DE IMAGENS e E BOTÃO CTA */
   .carousel-inner {
     height: 550px;
@@ -367,14 +235,14 @@
     left: 58%;
     top: 100px;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-     border-radius: 5px;
+    border-radius: 5px;
   }
 
   .img-3 {
     left: 76%;
     top: -7px;
     box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-     border-radius: 5px;
+    border-radius: 5px;
   }
 
   .img-box:hover {
@@ -382,75 +250,77 @@
   }
 
   /*SOBRE MIM*/
-    #sobre-mim {
-      display: flex;
-      /*transforma um elemento em um container flexível, permitindo alinhar e distribuir os elementos filhos de forma mais fácil e responsiva.*/
-      justify-content: center;
-      align-items: center;
-      padding: 40px 30px;
-      background-color: #fff4d3;
-    }
+  #sobre-mim {
+    display: flex;
+    /*transforma um elemento em um container flexível, permitindo alinhar e distribuir os elementos filhos de forma mais fácil e responsiva.*/
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: #fff4d3;
+  }
 
-    #sobre-mim .container {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      margin-left: 340px;
-      display: flex;
-      max-width: 1310px;
-      width: 80%;
-      gap: 40px;
-      /* controle da distância entre imagem e texto */
-      align-items: center;
-    }
+  #sobre-mim .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 340px;
+    display: flex;
+    max-width: 1310px;
+    width: 80%;
+    gap: 40px;
+    /* controle da distância entre imagem e texto */
+    align-items: center;
+  }
 
-    #sobre-mim .imagem {
-      width: 18%;
-      /* imagem ocupa 40% do container */
-      flex-shrink: 0;
-      /* impede ela de encolher demais */
-    }
+  #sobre-mim .imagem {
+    width: 18%;
+    /* imagem ocupa 40% do container */
+    flex-shrink: 0;
+    /* impede ela de encolher demais */
+  }
 
-    #sobre-mim .imagem img {
-      display: block;
-      width: 100%;
-      height: 260px;
-      box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-    }
+  #sobre-mim .imagem img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
 
-    #sobre-mim .conteudo {
-      width: 40%;
-      /* texto ocupa os 60% restantes */
-    }
+  #sobre-mim .conteudo {
+    width: 40%;
+    /* texto ocupa os 60% restantes */
+  }
 
-    #sobre-mim h2 {
-      font-size: 50px;
-      font-weight: bold;
-      /*negrito*/
-      color: #32391e;
-      margin-bottom: 15px;
-      font-family: "Marcellus", sans-serif;
-      margin-left: 15px;
-    }
+  #sobre-mim h2 {
+    font-size: 50px;
+    font-weight: bold;
+    /*negrito*/
+    color: #32391e;
+    margin-bottom: 15px;
+    font-family: "Marcellus", sans-serif;
+    margin-left: 15px;
+  }
 
-    #sobre-mim h3 {
-      font-weight: bold;
-      /*negrito*/
-      color: #32391e;
-      margin-bottom: 15px;
-      font-family: "Marcellus", sans-serif;
-      margin-left: 110px;
-    }
-    #sobre-mim p {
-      font-size: 19px;
-      color: #32391e;
-      line-height: 1.9;
-      font-family: "Marcellus", sans-serif;
-      text-align: justify;
-    }
+  #sobre-mim h3 {
+    font-weight: bold;
+    /*negrito*/
+    color: #32391e;
+    margin-bottom: 15px;
+    font-family: "Marcellus", sans-serif;
+    margin-left: 110px;
+  }
 
-    #sobre-mim .ver-mais {
-    color: #d0a523; /* verde escuro usado no site */
+  #sobre-mim p {
+    font-size: 19px;
+    color: #32391e;
+    line-height: 1.9;
+    font-family: "Marcellus", sans-serif;
+    text-align: justify;
+  }
+
+  #sobre-mim .ver-mais {
+    color: #d0a523;
+    /* verde escuro usado no site */
     font-weight: bold;
     text-decoration: underline;
   }
@@ -613,7 +483,7 @@
     border-radius: 5px;
   }
 
-  .btn-orcamento-localizacao{
+  .btn-orcamento-localizacao {
     padding: 10px 30px;
     background-color: #32391e;
     color: #fff4d3;
@@ -629,72 +499,6 @@
   .btn-orcamento-localizacao:hover {
     background-color: #4c5528;
     color: #f8e09a;
-  }
-
-  /*FOOTER*/
-  footer {
-    background-color: #32391e !important;
-    font-family: "Marcellus", sans-serif !important;
-
-    .outro {
-      color: #ffce3a;
-      text-transform: none !important;
-      margin-top: 15px;
-      font-size: 20px;
-    }
-
-    .insta {
-      color: #f8e09a !important;
-      text-decoration: none;
-    }
-
-    .outros {
-      margin-top: 20px;
-      color: #f8e09a;
-    }
-
-    .link {
-      color: #f8e09a;
-    }
-
-    .link:hover {
-      transition: 1s;
-      color: #c29f36;
-    }
-
-    .logo-footer {
-      box-shadow: 0 0 6px 3px rgb(255, 219, 129);
-      width: 147px;
-      height: 147px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      margin-left: 60px;
-    }
-
-    .loja {
-      margin-top: 20px;
-      color: #f8e09a;
-      font-size: 14px;
-    }
-
-    .nomeloja {
-      color: #ffce3a;
-      text-transform: none !important;
-      font-size: 25px;
-      top: 10%;
-    }
-
-    .linha {
-      color: #ffce3a;
-    }
-
-    .fab.fa-instagram {
-      font-size: 27px;
-      color: #e1306c;
-      /* Cor do Instagram */
-      margin-right: 15px;
-      margin-bottom: 40px;
-    }
   }
 
   #btnTopo {
@@ -796,54 +600,45 @@
     }
 
 
-/*SOBRE-NOS*/
-  #sobre-mim .imagem img {
-    display: block;
-    width: 100%;
-    height: 340px;
-    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-  }
+    /*SOBRE-NOS*/
+    #sobre-mim .imagem img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
 
-  #sobre-mim .conteudo {
-    width: 40%;
-  }
+    #sobre-mim .conteudo {
+      width: 40%;
+    }
 
-  #sobre-mim h2 {
-    font-size: 45px;
-     text-align: center;
-  }
+    #sobre-mim h2 {
+      font-size: 45px;
+      text-align: center;
+    }
 
-   #sobre-mim h3 {
-    margin-left: 60px;
-   }
+    #sobre-mim h3 {
+      margin-left: 60px;
+    }
 
     #sobre-mim .container {
-    margin-left: 180px;
-    display: flex;
-    max-width: 1310px;
-    width: 100%;
-    gap: 40px;
-    /* controle da distância entre imagem e texto */
-    align-items: center;
-  }
-
-  #sobre-mim .imagem {
-    width: 35%;
-    /* imagem ocupa 40% do container */
-    flex-shrink: 0;
-    /* impede ela de encolher demais */
-  }
-
-
-   /*FOOTER*/
-    .logodescriçao {
-      text-align: center;
-
-      .logo-footer {
-        margin-left: 5px;
-      }
+      margin-left: 180px;
+      display: flex;
+      max-width: 1310px;
+      width: 100%;
+      gap: 40px;
+      /* controle da distância entre imagem e texto */
+      align-items: center;
     }
+
+    #sobre-mim .imagem {
+      width: 35%;
+      /* imagem ocupa 40% do container */
+      flex-shrink: 0;
+      /* impede ela de encolher demais */
+    }
+
   }
 
   /* PARA TELAS DE CELULARES */
@@ -905,7 +700,7 @@
     /*CATEGORIA*/
     .categorias {
       font-size: 36px;
-       margin-top: 90px;
+      margin-top: 90px;
     }
 
     .carousel-item-box {
@@ -929,54 +724,59 @@
     }
 
     /*SOBRE*/
-     #sobre-mim .container {
-    flex-direction: column; 
-    margin-left: 20px;     
-    width: 90%;             
-    gap: 20px;              
-  }
+    #sobre-mim .container {
+      flex-direction: column;
+      margin-left: 20px;
+      width: 90%;
+      gap: 20px;
+    }
 
-  #sobre-mim .imagem {
-    width: 80%;            
-    height: auto;            /* altura automática para manter proporção */
-  }
+    #sobre-mim .imagem {
+      width: 80%;
+      height: auto;
+      /* altura automática para manter proporção */
+    }
 
-  #sobre-mim .imagem img {
-    height: auto;            /* imagem com altura automática */
-    max-width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    margin-top: 100px;
-  }
+    #sobre-mim .imagem img {
+      height: auto;
+      /* imagem com altura automática */
+      max-width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      margin-top: 100px;
+    }
 
-  #sobre-mim .conteudo {
-    width: 100%;            
-  }
+    #sobre-mim .conteudo {
+      width: 100%;
+    }
 
-  #sobre-mim h2 {
-    margin-left: 0;          
-    font-size: 36px;
-  }
-  #sobre-mim h3 {
-       margin-left: 20px;          
-    font-size: 32px; 
-  }
+    #sobre-mim h2 {
+      margin-left: 0;
+      font-size: 36px;
+    }
 
-  #sobre-mim p {
-    font-size: 16px;       
+    #sobre-mim h3 {
+      margin-left: 20px;
+      font-size: 32px;
+    }
 
-  #sobre-mim h3 {
-    margin-left: 0;
-  }
+    #sobre-mim p {
+      font-size: 16px;
+
+      #sobre-mim h3 {
+        margin-left: 0;
+      }
+
+    }
 
     /*FEEDBACK*/
     .feedback-section {
-      height: 380px;
+      height: 420px;
       margin-bottom: 70px;
     }
- 
-     .feed{
-    font-size: 18px;
-  }
+
+    .feed {
+      font-size: 36px;
+    }
 
     .feedback-card {
       height: 230px;
@@ -988,7 +788,7 @@
       height: 75px;
     }
 
-/*LOCALIZAÇÃO*/
+    /*LOCALIZAÇÃO*/
     #localizacao {
       font-size: 15px;
       font-weight: bold;
@@ -996,8 +796,7 @@
     }
 
     .onde {
-      font-size: 36px;
-      font-weight: bold;
+      font-size: 36px !important;
     }
 
     .endereco {
@@ -1008,13 +807,4 @@
       width: 300px;
     }
 
-    /*FOOTER*/
-    footer {
-      margin-top: 70px;
-    }
-
-    .logodescriçao {
-      text-align: center;
-    }
-  }
   }
