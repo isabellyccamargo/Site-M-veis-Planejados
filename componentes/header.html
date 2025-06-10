@@ -11,12 +11,10 @@
           style="font-size: 32px;">P</span>lanejados</div>
     </div>
 
-
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="bi bi-list" style="font-size: 28px; color: #243511;"></i>
-    </button>
+<button id="menu-toggle" class="navbar-toggler custom-toggler" type="button" aria-controls="navbarSupportedContent"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <i class="bi bi-list" style="font-size: 28px; color: #243511;"></i>
+</button>
 
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -121,23 +119,31 @@
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navbar-nav a.icon-text");
     const btnOrcamento = document.querySelector(".btn-orcamento");
-    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navbarCollapse = document.getElementById("navbarSupportedContent");
+    const toggleButton = document.getElementById("menu-toggle");
 
-    navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (navbarCollapse.classList.contains("show")) {
-          new bootstrap.Collapse(navbarCollapse).hide();
-        }
-      });
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+      toggle: false
     });
 
-    if (btnOrcamento) {
-      btnOrcamento.addEventListener("click", function () {
-        if (navbarCollapse.classList.contains("show")) {
-          new bootstrap.Collapse(navbarCollapse).hide();
-        }
-      });
-    }
-  });
+    // Toggle no botão hambúrguer
+    toggleButton.addEventListener("click", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        bsCollapse.hide();
+      } else {
+        bsCollapse.show();
+      }
+    });
 
+    // Fecha o menu ao clicar em qualquer link
+    [...navLinks, btnOrcamento].forEach(el => {
+      if (el) {
+        el.addEventListener("click", function () {
+          if (navbarCollapse.classList.contains("show")) {
+            bsCollapse.hide();
+          }
+        });
+      }
+    });
+  });
 </script>
