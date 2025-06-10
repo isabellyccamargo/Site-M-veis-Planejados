@@ -291,27 +291,6 @@
      };
    </script>
 
-   <!-- UNDERLINE DO MENU -->
-   <script>
-     const menu = document.getElementById('navbarSupportedContent');
-     const items = menu.querySelectorAll('.nav-item');
-     const underline = menu.querySelector('.underline');
-
-     function moveUnderline(target) {
-
-       underline.style.width = `${target.offsetWidth}px`;
-       underline.style.left = `${target.offsetLeft}px`;
-     }
-
-     items.forEach(item => {
-       item.addEventListener('click', () => moveUnderline(item));
-     });
-
-     window.addEventListener('load', () => {
-       moveUnderline(items[0]);
-     });
-   </script>
-
    <!-- HAMBURGUER DO RESPONSIVO -->
    <script>
      document.addEventListener("DOMContentLoaded", function() {
@@ -335,48 +314,6 @@
          });
        }
      });
-   </script>
-
-   <!-- UNDERLINE DO SOBRE NÓS -->
-   <script>
-     document.addEventListener("DOMContentLoaded", function() {
-       const tabs = document.querySelectorAll(".tab");
-       const contents = document.querySelectorAll(".conteudo-tab");
-       const underline = document.querySelector(".tabs .underline-sobre");
-
-       function moveUnderline(tab) {
-         underline.style.width = `${tab.offsetWidth}px`;
-         underline.style.left = `${tab.offsetLeft}px`;
-       }
-
-       tabs.forEach(tab => {
-         tab.addEventListener("click", () => {
-           // Alternar abas
-           tabs.forEach(t => t.classList.remove("ativo"));
-           contents.forEach(c => c.style.display = "none");
-
-           tab.classList.add("ativo");
-           const target = tab.getAttribute("data-tab");
-           document.getElementById(target).style.display = "block";
-
-           moveUnderline(tab);
-         });
-       });
-
-       // Inicializa underline e conteúdo ao carregar
-       const activeTab = document.querySelector(".tab.ativo");
-       if (activeTab) {
-         moveUnderline(activeTab);
-         document.getElementById(activeTab.getAttribute("data-tab")).style.display = "block";
-       }
-
-       // Atualiza underline se redimensionar a janela (resolução muda)
-       window.addEventListener("resize", () => {
-         const activeTab = document.querySelector(".tab.ativo");
-         if (activeTab) moveUnderline(activeTab);
-       });
-     });
-     
    </script>
 
    <!-- CATEGORIAS -->
