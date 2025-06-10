@@ -55,6 +55,48 @@
 
      </div>
 
+    <?php
+      $categoriasDir = 'fotos/categorias';
+      $cardsHtml = '<div></div>';
+
+      if (is_dir($categoriasDir)) {
+        $pastas = scandir($categoriasDir);
+
+        foreach ($pastas as $pasta) {
+          if ($pasta === '.' || $pasta === '..') continue;
+
+          $caminhoCapa = "$categoriasDir/$pasta/capa/capa.jpg";
+
+          if (is_dir("$categoriasDir/$pasta") && file_exists($caminhoCapa)) {
+
+            $nomeFormatado = ucwords(str_replace('-', ' ', $pasta));
+
+            $cardsHtml .= ' 
+              <div class="category-card" style="min-width: 200px;">
+                <a href="galeria.php?categoria=' . urlencode($pasta) . '" class="text-decoration-none text-dark">
+
+                  <img src="' . $caminhoCapa . '" class="card-img-top category-img" alt="' . htmlspecialchars($nomeFormatado) . '" style="width: 100%;">
+
+                  <div class="card-body p-2 text-center">
+                    <p class="mb-0 Categoria-p">' . htmlspecialchars($nomeFormatado) . '</p>
+                  </div>
+
+                </a>
+              </div>';
+
+//            $cardsHtml .= '
+//                        <div class="category-card" style="min-width: 140px;">
+//                          <a href="galeria.php?categoria=' . urlencode($pasta) . '" class="text-decoration-none ">
+//                            <img src="' . $caminhoCapa . '" class="category-img"
+//                              alt="' . htmlspecialchars($nomeFormatado) . '" style="width: 100%; height: 90px; object-fit: cover;">
+//                            <p class="nome small mt-2">' . htmlspecialchars($nomeFormatado) . '</p>
+//                          </a>
+//                        </div>';
+          }
+        }
+      }
+    ?>
+
      <!-- CATEGORIAS -->
      <section id="categoria">
 
@@ -74,7 +116,10 @@
            <div class="custom-carousel" id="categoryCarousel"
              style="display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 20px; scrollbar-width: none; -ms-overflow-style: none;">
 
-             <!-- Seus cards -->
+
+             <?= $cardsHtml ?>
+             
+             <!-- Seus cards 
              <div class="category-card" style="min-width: 200px;">
                <a href="galeria.php?categoria=banheiro" class="text-decoration-none text-dark">
 
@@ -144,6 +189,8 @@
 
                </a>
              </div>
+             -->
+
            </div>
 
            <button class="btn  rounded-circle shadow" type="button" id="btn-next">

@@ -1,0 +1,7 @@
+{
+    "name": "isabellycamargo/ribeiroambientesplanejados",
+    "description": "Site para divulgação e contratação de serviços de móveis planejados",
+    "require": {
+        "phpmailer/phpmailer": "6.9"
+    }
+}
