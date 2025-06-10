@@ -316,6 +316,9 @@ body {
     max-height: 90vh;
   }
 
+  .btn-galeria {
+    margin-left: 400px;
+  }
 
 }
 
@@ -370,6 +373,10 @@ body {
     border-radius: 8px;
     object-fit: contain;
     text-align: center;
+  }
+
+  .btn-galeria {
+    margin-left: 80px;
   }
 
 }
