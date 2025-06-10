@@ -34,15 +34,15 @@
         </div>
         <div class="carousel-item">
           <img src="fotos/carrossel-menu/2b9e7e37-9923-4bff-9684-b3c8f1818b43.JPG" class="d-block w-100"
-            alt="iamgem do projeto">
+            alt="imagem do projeto">
         </div>
         <div class="carousel-item active ">
           <img src="fotos/carrossel-menu/855b3222-db65-4bbd-b865-c1834a81cefc.JPG" class="d-block w-100"
-            alt="iamgem do projeto">
+            alt="imagem do projeto">
         </div>
         <div class="carousel-item ">
           <img src="fotos/carrossel-menu/95075929-0a23-4865-a143-1e8f8fec32a1.JPG" class="d-block w-100"
-            alt="iamgem do projeto">
+            alt="imagem do projeto">
         </div>
       </div>
     </div>
@@ -149,7 +149,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="js/script.js"></script> -->
 
-
+    <a href="formulario.php" class="btn btn-galeria">Faça seu orçamento</a>
 
     <div id="modal" class="modal">
       <span class="close">&times;</span>

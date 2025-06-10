@@ -240,6 +240,25 @@ body {
   display: none;
 }
 
+.btn-galeria {
+   padding: 10px 30px;
+    background-color: #32391e;
+    color: #fff4d3;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    margin-left: 650px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+  .btn-.btn-galeria:hover {
+    background-color: #4c5528;
+    color: #f8e09a;
+  }
+
+
 @media (max-width: 1024px) {
   #categoria-menu .custom-carousel {
     gap: 10px;

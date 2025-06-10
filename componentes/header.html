@@ -63,26 +63,57 @@
 
 <!-- UNDERLINE DO MENU -->
 <script>
-
   const menu = document.getElementById('navbarSupportedContent');
   const items = menu.querySelectorAll('.nav-item');
   const underline = menu.querySelector('.underline');
 
   function moveUnderline(target) {
-
     underline.style.width = `${target.offsetWidth}px`;
     underline.style.left = `${target.offsetLeft}px`;
   }
 
+  function updateUnderlineByScroll() {
+    const scrollPos = window.scrollY + 180; // ajuste conforme altura do menu
+    let currentSectionId = null;
+
+    for (const item of items) {
+      const link = item.querySelector('a');
+      if (!link) continue;
+      const sectionId = link.getAttribute('href').split('#')[1];
+      if (!sectionId) continue;
+      const section = document.getElementById(sectionId);
+      if (!section) continue;
+
+      if (scrollPos >= section.offsetTop) {
+        currentSectionId = sectionId;
+      }
+    }
+
+    if (currentSectionId) {
+      items.forEach(item => {
+        const link = item.querySelector('a');
+        const sectionId = link.getAttribute('href').split('#')[1];
+        if (sectionId === currentSectionId) {
+          moveUnderline(item);
+        }
+      });
+    }
+  }
+
+  // Atualiza underline ao rolar
+  window.addEventListener('scroll', updateUnderlineByScroll);
+
+  // Atualiza ao clicar
   items.forEach(item => {
     item.addEventListener('click', () => moveUnderline(item));
   });
 
+  // Atualiza após carregar e garantir rolagem completa
   window.addEventListener('load', () => {
-    moveUnderline(items[0]);
+    setTimeout(updateUnderlineByScroll, 100); // Aguarda 100ms para rolagem ser concluída
   });
-
 </script>
+
 
 <!-- HAMBURGUER DO RESPONSIVO -->
 <script>
