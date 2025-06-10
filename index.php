@@ -71,8 +71,8 @@
 
             $nomeFormatado = ucwords(str_replace('-', ' ', $pasta));
 
-            $cardsHtml .= ' 
-              <div class="category-card" style="min-width: 200px;">
+            $cardsHtml .=
+              '<div class="category-card" style="min-width: 200px;">
                 <a href="galeria.php?categoria=' . urlencode($pasta) . '" class="text-decoration-none text-dark">
 
                   <img src="' . $caminhoCapa . '" class="card-img-top category-img" alt="' . htmlspecialchars($nomeFormatado) . '" style="width: 100%;">
@@ -83,15 +83,6 @@
 
                 </a>
               </div>';
-
-//            $cardsHtml .= '
-//                        <div class="category-card" style="min-width: 140px;">
-//                          <a href="galeria.php?categoria=' . urlencode($pasta) . '" class="text-decoration-none ">
-//                            <img src="' . $caminhoCapa . '" class="category-img"
-//                              alt="' . htmlspecialchars($nomeFormatado) . '" style="width: 100%; height: 90px; object-fit: cover;">
-//                            <p class="nome small mt-2">' . htmlspecialchars($nomeFormatado) . '</p>
-//                          </a>
-//                        </div>';
           }
         }
       }
@@ -116,80 +107,7 @@
            <div class="custom-carousel" id="categoryCarousel"
              style="display: flex; overflow-x: scroll; scroll-behavior: smooth; gap: 20px; scrollbar-width: none; -ms-overflow-style: none;">
 
-
              <?= $cardsHtml ?>
-             
-             <!-- Seus cards 
-             <div class="category-card" style="min-width: 200px;">
-               <a href="galeria.php?categoria=banheiro" class="text-decoration-none text-dark">
-
-                 <img
-                   src="fotos/categorias/banheiro/capa/capa.jpg"
-                   class="card-img-top category-img" alt="Banheiro" style="width: 100%;">
-
-                 <div class="card-body p-2 text-center">
-                   <p class="mb-0 Categoria-p">Banheiro</p>
-                 </div>
-
-               </a>
-             </div>
-
-             <div class="category-card" style="min-width: 200px;">
-               <a href="galeria.php?categoria=quarto" class="text-decoration-none text-dark">
-
-                 <img
-                   src="fotos/categorias/quarto/capa/capa.jpg"
-                   class="card-img-top category-img" alt="Quarto" style="width: 100%;">
-
-                 <div class="card-body p-2 text-center">
-                   <p class="mb-0 Categoria-p">Quarto</p>
-                 </div>
-
-               </a>
-             </div>
-
-             <div class="category-card" style="min-width: 200px;">
-               <a href="galeria.php?categoria=cozinha" class="text-decoration-none text-dark">
-
-                 <img
-                   src="fotos/categorias/cozinha/capa/capa.jpg"
-                   class="card-img-top category-img" alt="Cozinha" style="width: 100%;">
-
-                 <div class="card-body p-2 text-center">
-                   <p class="mb-0 Categoria-p">Cozinha</p>
-                 </div>
-
-               </a>
-             </div>
-
-             <div class="category-card" style="min-width: 200px;">
-               <a href="galeria.php?categoria=sala" class="text-decoration-none text-dark">
-
-                 <img
-                   src="fotos/categorias/sala/capa/capa.jpg"
-                   class="card-img-top category-img" alt="Sala" style="width: 100%;">
-
-                 <div class="card-body p-2 text-center">
-                   <p class="mb-0 Categoria-p">Sala</p>
-                 </div>
-
-               </a>
-             </div>
-
-             <div class="category-card" style="min-width: 200px;">
-               <a href="galeria.php?categoria=comercial" class="text-decoration-none text-dark">
-
-                 <img
-                   src="fotos/categorias/comercial/capa/capa.jpg"
-                   class="card-img-top category-img" alt="Escritório" style="width: 100%;">
-
-                 <div class="card-body p-2 text-center">
-                   <p class="mb-0 Categoria-p">Comercial</p>
-                 </div>
-
-               </a>
-             </div>
-             -->
 
            </div>
 
@@ -458,7 +376,7 @@
          if (activeTab) moveUnderline(activeTab);
        });
      });
-
+     
    </script>
 
    <!-- CATEGORIAS -->
