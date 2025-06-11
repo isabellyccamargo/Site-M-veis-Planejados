@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -54,7 +55,7 @@
         <h2 class="solicite">Solicite seu orçamento sem compromisso!</h2>
         <h3 class="entreEmContato">Preencha o formulário abaixo e entraremos em contato com você o mais breve possível.</h3>
       </div>
-      <form class="row g-3 justify-content-center needs-validation" action="servicos/envia-email.php" method="post" novalidate>
+      <form id="formOrcamento" class="row g-3 justify-content-center needs-validation" action="servicos/envia-email.php" method="post" novalidate>
         <div class="col-8 ">
           <label for="nome" class="form-label">Nome</label>
           <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo" required pattern="[A-Za-zÀ-ÿ\s]+">
@@ -122,14 +123,67 @@
       ↑
     </button>
 
-    <!-- Ícones Font Awesome (necessário para os ícones) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   </main>
 
   <?php include 'componentes/footer.html'; ?>
+
+  <!-- Caixas de diálogo -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Ícones Font Awesome (necessário para os ícones) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Utilidade para exibir mensagens personalizadas
+    function mostrarMensagem(tipo, titulo, mensagem) {
+      const cores = {
+        success: '#2f3e1d',     // Verde escuro
+        error: '#a94442',       // Vermelho
+        warning: '#8a6d3b',     // Amarelo escuro
+        info: '#31708f'         // Azul escuro
+      };
+
+      Swal.fire({
+        icon: tipo,
+        title: titulo,
+        text: mensagem,
+        confirmButtonColor: cores[tipo] || '#2f3e1d',
+        background: '#fdfae5', // Fundo bege claro
+        color: '#2f3e1d',       // Texto verde escuro
+      });
+    }
+
+    // Exemplo de uso ao enviar um formulário:
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('formOrcamento');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+
+          fetch('servicos/envia-email.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.sucesso) {
+              mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
+            } else {
+              mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
+            }
+          })
+          .catch(error => {
+            console.error('Erro na requisição:', error);
+            mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
+          });
+        });
+      }
+    });
+  </script>
 
   <script>
     const btn = document.getElementById("btnTopo");

@@ -7,7 +7,6 @@ $dados = [
     'nome'     => $_POST['nome']     ?? '',
     'telefone' => $_POST['telefone'] ?? '',
     'email'    => $_POST['email']    ?? '',
-    'endereco' => $_POST['endereco'] ?? '',
     'estado'   => $_POST['estado']   ?? '',
     'cidade'   => $_POST['cidade']   ?? '',
     'cep'      => $_POST['cep']      ?? '',
@@ -18,8 +17,11 @@ error_log("Dados do Usuário: " . $dados['nome']);
 
 $resultado = enviarEmail($dados);
 
-if ($resultado === true) {
-    echo "E-mail enviado com sucesso!";
+if ($resultado) {
+    echo json_encode(['sucesso' => true]);
 } else {
-    echo $resultado; // Exibe o erro
+    echo json_encode([
+        'sucesso' => false,
+        'mensagem' => 'Erro ao enviar o e-mail. Tente novamente mais tarde.'
+    ]);
 }
