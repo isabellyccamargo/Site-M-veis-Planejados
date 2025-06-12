@@ -13,15 +13,14 @@ $dados = [
     'texto'    => $_POST['texto']    ?? ''
 ];
 
-error_log("Dados do Usuário: " . $dados['nome']);
-
 $resultado = enviarEmail($dados);
 
 if ($resultado) {
     echo json_encode(['sucesso' => true]);
 } else {
+
     echo json_encode([
         'sucesso' => false,
-        'mensagem' => 'Erro ao enviar o e-mail. Tente novamente mais tarde.'
+        'mensagem' => $resultado
     ]);
 }

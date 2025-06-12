@@ -36,7 +36,7 @@ function enviarEmail(array $dados) {
         $mail->send();
         return true;
     } catch (Exception $e) {
-        return "Erro: {$mail->ErrorInfo}";
+        return $mail->ErrorInfo;
     }
 }
 
@@ -53,7 +53,19 @@ function retornaCorpoEmail(array $dados){
     $template = file_get_contents(__DIR__ . '/../email-template.html');
 
   return str_replace(
-    ['{{nome}}', '{{telefone}}', '{{email}}', '{{estado}}', '{{cidade}}', '{{cep}}', '{{mensagem}}'],
-    [htmlspecialchars($nome), htmlspecialchars($telefone), htmlspecialchars($email), htmlspecialchars($estado), htmlspecialchars($cidade), htmlspecialchars($cep), nl2br(htmlspecialchars($texto))],
+    ['{{nome}}', 
+     '{{telefone}}', 
+     '{{email}}', 
+     '{{estado}}', 
+     '{{cidade}}', 
+     '{{cep}}', 
+     '{{mensagem}}'],
+    [htmlspecialchars($nome), 
+     htmlspecialchars($telefone), 
+     htmlspecialchars($email), 
+     htmlspecialchars($estado), 
+     htmlspecialchars($cidade), 
+     htmlspecialchars($cep), 
+     nl2br(htmlspecialchars($texto))],
     $template);
 }

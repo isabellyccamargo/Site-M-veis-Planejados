@@ -153,7 +153,7 @@
            <h2 class="sobre">Nossa Identidade</h2>
            <h3 class="sobre">Jefferson Ribeiro</h3>
            <p>
-             Dono da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Buscando sempre evoluir pessoal e profissionalmente, com foco... <a href="sobreNos.php" class="ver-mais">Saiba mais</a>
+             Proprietário da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Buscando sempre evolução tanto na área pessoal quanto profissionalmente, com foco... <a href="sobrenos.php" class="ver-mais">saiba mais</a>
            </p>
          </div>
 

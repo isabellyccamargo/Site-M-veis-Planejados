@@ -59,17 +59,12 @@
         <div class="conteudo">
           <h2 class="sobre">Nossa Identidade</h2>
           <p>
-            Meu nome é<strong> Jefferson Ribeiro</strong>, tenho 30 anos, dono da empresa<strong> JR Ambientes Planejados</strong>,
-            com mais de 6 anos de experiência no mercado de móveis sob medida, sou uma pessoa movida por
-            <strong>propósito e
-              crescimento.</strong> Ao longo da minha trajetória, venho buscando constantemente evoluir tanto
-            no campo
-            pessoal quanto profissional, sempre com foco em integridade, aprendizado contínuo e conexões
-            significativas.
-            Acredito que cada experiência carrega um valor único e procuro transformar cada desafio em
-            oportunidade de
-            desenvolvimento. Tenho uma proprietária, que é minha esposa que se chama <strong> Ana
-              Freitas.</strong>
+            Meu nome é<strong> Jefferson Ribeiro</strong>, tenho 30 anos, propietário da empresa <strong>JR Ambientes Planejados</strong>.
+            Com mais de 6 anos de experiência no mercado de móveis sob medida, sou uma pessoa movida por <strong>propósito e crescimento</strong>. 
+            Ao longo da minha trajetória, venho buscando constantemente evoluir tanto na área pessoal quanto profissionalmente. Temos como princípio 
+            zelar pela integridade do nosso negócio, clientes e parceiros, buscar aprendizado contínuo e criar conexões significativas.
+            Acredito que cada experiência carrega um valor único e procuro transformar cada desafio uma oportunidade de
+            desenvolvimento. Tenho uma sócia, que é minha esposa que se chama <strong>Ana Freitas</strong>.
           </p>
 
           <div class="tabs">
