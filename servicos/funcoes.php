@@ -1,12 +1,14 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-function enviarEmail(array $dados) {
+function enviarEmail(array $dados)
+{
 
-    $env_file = __DIR__ . '/../'; 
+    $env_file = __DIR__ . '/../';
 
     if (file_exists($env_file . '.env')) {
         $dotenv = Dotenv\Dotenv::createImmutable($env_file);
@@ -28,7 +30,7 @@ function enviarEmail(array $dados) {
         $mail->Port       = $_ENV['MAIL_PORT'] ?? 587;;
         $mail->setFrom($_ENV['MAIL_FROM'], $_ENV['MAIL_FROM_NAME']);
         $mail->addAddress($_ENV['MAIL_TO']);
-        $mail->Subject    = $_ENV['MAIL_SUBJECT'] ?? '';
+        $mail->Subject    = "Dados para Contato";
         $mail->Body       = retornaCorpoEmail($dados);
 
         //$mail->AltBody = strip_tags($mensagemHtml);
@@ -40,7 +42,8 @@ function enviarEmail(array $dados) {
     }
 }
 
-function retornaCorpoEmail(array $dados){
+function retornaCorpoEmail(array $dados)
+{
 
     $nome     = $dados['nome']     ?? '';
     $telefone = $dados['telefone'] ?? '';
@@ -52,20 +55,25 @@ function retornaCorpoEmail(array $dados){
 
     $template = file_get_contents(__DIR__ . '/../email-template.html');
 
-  return str_replace(
-    ['{{nome}}', 
-     '{{telefone}}', 
-     '{{email}}', 
-     '{{estado}}', 
-     '{{cidade}}', 
-     '{{cep}}', 
-     '{{mensagem}}'],
-    [htmlspecialchars($nome), 
-     htmlspecialchars($telefone), 
-     htmlspecialchars($email), 
-     htmlspecialchars($estado), 
-     htmlspecialchars($cidade), 
-     htmlspecialchars($cep), 
-     nl2br(htmlspecialchars($texto))],
-    $template);
+    return str_replace(
+        [
+            '{{nome}}',
+            '{{telefone}}',
+            '{{email}}',
+            '{{estado}}',
+            '{{cidade}}',
+            '{{cep}}',
+            '{{mensagem}}'
+        ],
+        [
+            htmlspecialchars($nome),
+            htmlspecialchars($telefone),
+            htmlspecialchars($email),
+            htmlspecialchars($estado),
+            htmlspecialchars($cidade),
+            htmlspecialchars($cep),
+            nl2br(htmlspecialchars($texto))
+        ],
+        $template
+    );
 }

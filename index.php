@@ -95,7 +95,7 @@
 
          <h2 class="mb-4  categorias">Conheça ambientes já transformados!</h2>
 
-         <p class="slogan">"Planejando ambientes, realizando sonhos."</p>
+         <p class="slogan">"Transformando seu sonho em realidade!"</p>
 
          <div class="carousel-wrapper"
            style="position: relative; display: flex; align-items: center; justify-content: center;">
@@ -153,7 +153,7 @@
            <h2 class="sobre">Nossa Identidade</h2>
            <h3 class="sobre">Jefferson Ribeiro</h3>
            <p>
-             Proprietário da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Buscando sempre evolução tanto na área pessoal quanto profissionalmente, com foco... <a href="sobrenos.php" class="ver-mais">saiba mais</a>
+             Proprietário da empresa<strong> JR Ambientes Planejados</strong>, com mais de 6 anos de experiência no mercado de móveis sob medida. Buscando sempre evolução tanto na área pessoal quanto profissionalmente, com foco... <a href="sobre-nos.php" class="ver-mais">saiba mais</a>
            </p>
          </div>
 

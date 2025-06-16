@@ -72,9 +72,9 @@
         </div>
         <div class="col-8">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" name="email" required placeholder="seuemail@gmail.com">
+          <input type="email" class="form-control" id="email" name="email" required placeholder="seuemail@email.com">
           <div class="invalid-feedback">
-            Campo Obrigatório! Digite um email válido "seuemail@gmail.com".
+            Campo Obrigatório! Digite um email válido "seuemail@email.com".
           </div>
         </div>
         <div class="col-8 mx-auto d-flex justify-content-between flex-wrap gap-4">
@@ -139,10 +139,10 @@
     // Utilidade para exibir mensagens personalizadas
     function mostrarMensagem(tipo, titulo, mensagem) {
       const cores = {
-        success: '#2f3e1d',     // Verde escuro
-        error: '#a94442',       // Vermelho
-        warning: '#8a6d3b',     // Amarelo escuro
-        info: '#31708f'         // Azul escuro
+        success: '#2f3e1d', // Verde escuro
+        error: '#a94442', // Vermelho
+        warning: '#8a6d3b', // Amarelo escuro
+        info: '#31708f' // Azul escuro
       };
 
       Swal.fire({
@@ -151,35 +151,35 @@
         text: mensagem,
         confirmButtonColor: cores[tipo] || '#2f3e1d',
         background: '#fdfae5', // Fundo bege claro
-        color: '#2f3e1d',       // Texto verde escuro
+        color: '#2f3e1d', // Texto verde escuro
       });
     }
 
-    // Exemplo de uso ao enviar um formulário:
+    //Exemplo de uso ao enviar um formulário:
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('formOrcamento');
       if (form) {
-        form.addEventListener('submit', function (e) {
+        form.addEventListener('submit', function(e) {
           e.preventDefault();
 
           const formData = new FormData(form);
 
           fetch('servicos/envia-email.php', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.sucesso) {
-              mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
-            } else {
-              mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
-            }
-          })
-          .catch(error => {
-            console.error('Erro na requisição:', error);
-            mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
-          });
+              method: 'POST',
+              body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+              if (data.sucesso) {
+                mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
+              } else {
+                mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
+              }
+            })
+            .catch(error => {
+              console.error('Erro na requisição:', error);
+              mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
+            });
         });
       }
     });
@@ -209,7 +209,6 @@
     (() => {
       'use strict'
 
-
       const forms = document.querySelectorAll('.needs-validation')
 
       // Loop over them and prevent submission
@@ -218,8 +217,8 @@
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+            return;
           }
-
           form.classList.add('was-validated')
         }, false)
       })
@@ -235,7 +234,7 @@
       Array.from(forms).forEach(function(form) {
         form.addEventListener('submit', function(event) {
           // Validação custom e padrão
-          if (!form.checkValidity() || !emailGmailValido()) {
+          if (!form.checkValidity() || !validaEmail()) {
             event.preventDefault()
             event.stopPropagation()
           }
@@ -260,10 +259,10 @@
     })
 
     // Validação do e-mail para terminar em @gmail.com
-    function emailGmailValido() {
+    function validaEmail() {
       const email = document.getElementById('email')
-      if (!email.value.endsWith('@gmail.com')) {
-        email.setCustomValidity("O e-mail deve terminar com @gmail.com")
+      if (!email.value.includes('@')) {
+        email.setCustomValidity("E-mail inválido!")
         return false
       } else {
         email.setCustomValidity('')
@@ -273,7 +272,7 @@
 
     // Atualiza a validade enquanto digita
     document.getElementById('email').addEventListener('input', function() {
-      emailGmailValido()
+      validaEmail()
     })
   </script>
 

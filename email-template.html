@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
+
 <head>
   <meta charset='UTF-8'>
   <style>
@@ -9,32 +10,56 @@
       color: #2f3e1d;
       padding: 20px;
     }
+
     .container {
       background-color: #fff;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
       max-width: 600px;
       margin: auto;
       padding: 30px;
       border: 1px solid #dcd4af;
     }
+
     .header {
-      background-color: #2f3e1d;
+      background-color: #f5f0d7;
       color: #f5f0d7;
       text-align: center;
       padding: 10px 0;
       border-radius: 8px 8px 0 0;
       font-size: 22px;
       font-weight: bold;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
     }
+
+    .logo-header {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .icon-logo {
+      color: #32391e;
+      margin-left: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Marcellus", sans-serif;
+    }
+
     .info {
       margin: 15px 0;
     }
+
     .info strong {
       display: inline-block;
       width: 120px;
       color: #2f3e1d;
     }
+
     .mensagem {
       background-color: #f0ead2;
       padding: 15px;
@@ -43,6 +68,7 @@
       font-style: italic;
       white-space: pre-wrap;
     }
+
     .footer {
       margin-top: 30px;
       text-align: center;
@@ -51,9 +77,18 @@
     }
   </style>
 </head>
+
 <body>
   <div class='container'>
-    <div class='header'>Formulário de Contato</div>
+    <div class='header'>
+      <div class="logo-container fixed">
+        <img src="fotos/logo/logo.png" alt="Logo" class="logo-header">
+      </div>
+
+      <div class="icon-logo"><span style="font-size: 32px;">A</span>mbientes <span
+          style="font-size: 32px;">P</span>lanejados
+      </div>
+    </div>
     <div class='info'><strong>Nome:</strong> {{nome}}</div>
     <div class='info'><strong>Telefone:</strong> {{telefone}}</div>
     <div class='info'><strong>Email:</strong> {{email}}</div>
@@ -62,7 +97,8 @@
     <div class='info'><strong>CEP:</strong> {{cep}}</div>
     <div class='info'><strong>Mensagem:</strong></div>
     <div class='mensagem'>{{mensagem}}</div>
-    <div class='footer'>Ambientes Planejados · "Planejando ambientes, realizando sonhos."</div>
+    <div class='footer'>"Planejando ambientes, realizando sonhos."</div>
   </div>
 </body>
+
 </html>
