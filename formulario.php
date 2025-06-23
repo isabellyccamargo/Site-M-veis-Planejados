@@ -155,54 +155,34 @@
       });
     }
 
-    //Exemplo de uso ao enviar um formulário:
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('formOrcamento');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
+  // Força a validação do Bootstrap
+  form.classList.add('was-validated');
 
-          const formData = new FormData(form);
+  if (!form.checkValidity() || !validaEmail()) {
+    return; // Se inválido, não envia
+  }
 
-          fetch('servicos/envia-email.php', {
-              method: 'POST',
-              body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-              if (data.sucesso) {
-                mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
-              } else {
-                mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
-              }
-            })
-            .catch(error => {
-              console.error('Erro na requisição:', error);
-              mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
-            });
-        });
-      }
-    });
-  </script>
+  const formData = new FormData(form);
 
-  <script>
-    const btn = document.getElementById("btnTopo");
-    // Mostrar o botão quando descer 100px da parte de cima
-    window.onscroll = function() {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "block";
+  fetch('servicos/envia-email.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.sucesso) {
+        mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
+        form.reset();
+        form.classList.remove('was-validated');
       } else {
-        btn.style.display = "none";
+        mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
       }
-    };
-
-    // Quando clicar, volta pro topo suavemente
-    btn.onclick = function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    };
+    })
+    .catch(error => {
+      console.error('Erro na requisição:', error);
+      mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
+    });
+      
   </script>
 
   <script>
