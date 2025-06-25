@@ -78,28 +78,23 @@
           </div>
         </div>
         <div class="col-8 mx-auto d-flex justify-content-between flex-wrap gap-4">
+          <div class="flex-fill col-md-2">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" required name="cep" placeholder="00000-000" inputmode="numeric">
+            <div class="invalid-feedback">
+              Campo Obrigatório!
+            </div>
+          </div>
           <div class="flex-fill col-2">
             <label for="estado" class="form-label">Estado</label>
-            <select id="estado" class="form-select" name="estado" required>
-              <option selected disabled value="">Selecione</option>
-              <option>Paraná</option>
-              <option>São Paulo</option>
-              <option>Mato Grosso</option>
-            </select>
+            <input type="text" class="form-control" id="estado" required name="estado" required disabled>
             <div class="invalid-feedback">
               Campo Obrigatório!
             </div>
           </div>
           <div class=" flex-fill col-md-2 ">
             <label for="cidade" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="cidade" name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+">
-            <div class="invalid-feedback">
-              Campo Obrigatório!
-            </div>
-          </div>
-          <div class="flex-fill col-md-2">
-            <label for="cep" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="cep" required name="cep" placeholder="00000-000" inputmode="numeric">
+            <input type="text" class="form-control" id="cidade" name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+" disabled>
             <div class="invalid-feedback">
               Campo Obrigatório!
             </div>
@@ -155,89 +150,6 @@
       });
     }
 
-  // Força a validação do Bootstrap
-  form.classList.add('was-validated');
-
-  if (!form.checkValidity() || !validaEmail()) {
-    return; // Se inválido, não envia
-  }
-
-  const formData = new FormData(form);
-
-  fetch('servicos/envia-email.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.sucesso) {
-        mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
-        form.reset();
-        form.classList.remove('was-validated');
-      } else {
-        mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
-      }
-    })
-    .catch(error => {
-      console.error('Erro na requisição:', error);
-      mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
-    });
-      
-  </script>
-
-  <script>
-    (() => {
-      'use strict'
-
-      const forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-            return;
-          }
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-  </script>
-
-  <script>
-    // Bootstrap custom validation
-    (function() {
-      'use strict'
-      const forms = document.querySelectorAll('.needs-validation')
-
-      Array.from(forms).forEach(function(form) {
-        form.addEventListener('submit', function(event) {
-          // Validação custom e padrão
-          if (!form.checkValidity() || !validaEmail()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-
-    // Máscara telefone: (00) 00000-0000
-    document.getElementById('telefone').addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '')
-      v = v.replace(/^(\d{2})(\d)/g, '($1) $2')
-      v = v.replace(/(\d{5})(\d)/, '$1-$2')
-      e.target.value = v.slice(0, 15)
-    })
-
-    // Máscara CEP: 00000-000
-    document.getElementById('cep').addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '')
-      v = v.replace(/^(\d{5})(\d)/, '$1-$2')
-      e.target.value = v.slice(0, 9)
-    })
-
     // Validação do e-mail para terminar em @gmail.com
     function validaEmail() {
       const email = document.getElementById('email')
@@ -250,10 +162,88 @@
       }
     }
 
-    // Atualiza a validade enquanto digita
-    document.getElementById('email').addEventListener('input', function() {
-      validaEmail()
-    })
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const form = document.getElementById('formOrcamento');
+
+      if (form) {
+
+        // Máscara telefone: (00) 00000-0000
+        document.getElementById('telefone').addEventListener('input', function(e) {
+          let v = e.target.value.replace(/\D/g, '')
+          v = v.replace(/^(\d{2})(\d)/g, '($1) $2')
+          v = v.replace(/(\d{5})(\d)/, '$1-$2')
+          e.target.value = v.slice(0, 15)
+        })
+
+        // Máscara CEP: 00000-000
+        document.getElementById('cep').addEventListener('input', function(e) {
+          let v = e.target.value.replace(/\D/g, '')
+          v = v.replace(/^(\d{5})(\d)/, '$1-$2')
+          e.target.value = v.slice(0, 9)
+        })
+
+        document.getElementById('email').addEventListener('input', function() {
+          validaEmail()
+        })
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          form.classList.add('was-validated');
+
+          if (!form.checkValidity() || !validaEmail()) {
+            return; // Se inválido, não envia
+          }
+
+          const formData = new FormData(form);
+
+          fetch('servicos/envia-email.php', {
+              method: 'POST',
+              body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+              if (data.sucesso) {
+                mostrarMensagem('success', 'Mensagem enviada!', 'Obrigado por entrar em contato.');
+              } else {
+                mostrarMensagem('error', 'Erro!', data.mensagem || 'Não foi possível enviar sua mensagem.');
+              }
+            })
+            .catch(error => {
+              console.error('Erro na requisição:', error);
+              mostrarMensagem('error', 'Erro!', 'Falha na comunicação com o servidor.');
+            });
+        });
+      }
+    });
+  </script>
+
+  <!-- Consumindo API que retorna a cidade e estado passando o CEP como parâmetro -->
+  <script>
+    document.getElementById('cep').addEventListener('blur', function() {
+      const cep = this.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
+
+      if (cep.length !== 8) return; // CEP inválido
+
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.erro) {
+            console.error('Erro ao buscar o CEP:', error);
+            mostrarMensagem('warning', 'Atenção!', "CEP não encontrado.");
+            return;
+          }
+
+          // Preencher cidade
+          document.getElementById('cidade').value = data.localidade;
+          document.getElementById('estado').value = data.estado;
+        })
+        .catch(error => {
+          console.error('Erro ao buscar o CEP:', error);
+          mostrarMensagem('warning', 'Atenção!', "CEP não encontrado.");
+        });
+    });
   </script>
 
 </body>

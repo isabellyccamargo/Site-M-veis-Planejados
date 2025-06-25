@@ -5,8 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-function enviarEmail(array $dados)
-{
+function enviarEmail(array $dados) {
 
     $env_file = __DIR__ . '/../';
 
