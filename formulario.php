@@ -87,14 +87,14 @@
           </div>
           <div class="flex-fill col-2">
             <label for="estado" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="estado" required name="estado" required disabled>
+            <input type="text" class="form-control" id="estado" required name="estado" required readonly>
             <div class="invalid-feedback">
               Campo Obrigatório!
             </div>
           </div>
           <div class=" flex-fill col-md-2 ">
             <label for="cidade" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="cidade" name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+" disabled>
+            <input type="text" class="form-control" id="cidade" name="cidade" required pattern="[A-Za-zÀ-ÿ\s]+" readonly>
             <div class="invalid-feedback">
               Campo Obrigatório!
             </div>
